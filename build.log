@@ -1,0 +1,53 @@
+
+> avixr-landing@0.1.0 build
+> next build
+
+  Γû▓ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/10) ...
+   Generating static pages (2/10) 
+   Generating static pages (4/10) 
+   Generating static pages (7/10) 
+Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at C:\avixr-main\.next\server\app\page.js:55:181
+    at sB (C:\avixr-main\.next\server\app\page.js:59:4908)
+    at nj (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854)
+    at nB (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539) {
+  digest: '1294272973'
+}
+
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+
+Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at C:\avixr-main\.next\server\app\page.js:55:181
+    at sB (C:\avixr-main\.next\server\app\page.js:59:4908)
+    at nj (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:46252)
+    at nM (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:47572)
+    at nM (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:61547)
+    at nL (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64547)
+    at nB (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+    at nD (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:66681)
+    at nL (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:64854)
+    at nB (C:\avixr-main\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:12:67539)
+ Γ£ô Generating static pages (10/10)
+
+> Export encountered errors on following paths:
+	/page: /
