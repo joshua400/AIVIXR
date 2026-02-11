@@ -1,75 +1,43 @@
-# Avixr Landing Page
+# Avixr Technologies Website
 
-Landing page built to match Figma design exactly.
+Official website for Avixr Technologies Pvt Ltd, a research-driven software company specializing in AI, web development, and digital solutions.
 
-## 🚀 Quick Start
+## 🚀 Overview
+
+This website has been completely rebuilt with a premium modern SaaS design, featuring:
+
+- **Dark Theme**: Deep navy background with glowing accents
+- **3D Animations**: Interactive orbital hero section and tilt cards
+- **Glassmorphism**: Modern frosted glass UI elements
+- **Responsive Design**: Fully optimized for all devices
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: Custom CSS & Intersection Observer
+- **Language**: TypeScript
+
+## 🏃‍♂️ Getting Started
 
 1. **Install dependencies:**
-```bash
-npm install
-```
+
+   ```bash
+   npm install
+   ```
 
 2. **Run the development server:**
-```bash
-npm run dev
-```
 
-3. **Open** [http://localhost:3000](http://localhost:3000) in your browser.
+   ```bash
+   npm run dev
+   ```
 
-## 📐 Figma Design Integration
+3. **Open:** [http://localhost:3000](http://localhost:3000)
 
-### ⚠️ Important: We Need the Standard Figma File URL
+## 📄 Credits
 
-The Figma Make URL you provided (`figma.com/make/...`) cannot be accessed via the API. We need the **standard file URL**.
+**Create done by Joshua Ragiland M**
 
-### How to Get the Standard URL:
+---
 
-1. **Click your Figma Make link** to open it
-2. **Look for "Open in Figma" button** at the top
-3. **Click it** - this opens the file in Figma
-4. **Copy the URL** from your browser's address bar
-5. **The URL should look like:**
-   - `https://www.figma.com/file/XXXXXXXXXXXXXXX/File-Name`
-   - OR `https://www.figma.com/design/XXXXXXXXXXXXXXX/File-Name`
-
-📖 **See `EXTRACT_FIGMA_URL_STEPS.md` for detailed step-by-step instructions.**
-
-### Once We Have the File URL:
-
-The design will be automatically updated to match Figma exactly:
-- ✅ Exact colors and color palette
-- ✅ Exact typography (fonts, sizes, weights, line heights)
-- ✅ Exact spacing and padding values
-- ✅ Exact layout and positioning
-- ✅ Exact border radius, shadows, and effects
-- ✅ All images, icons, and assets downloaded and integrated
-
-## 📁 Project Structure
-
-```
-avixr/
-├── app/
-│   ├── page.tsx          # Main landing page
-│   ├── layout.tsx        # Root layout
-│   └── globals.css       # Global styles
-├── components/
-│   ├── Navigation.tsx    # Navigation bar
-│   ├── Hero.tsx          # Hero section
-│   ├── Features.tsx      # Features section
-│   ├── About.tsx         # About section
-│   ├── Contact.tsx       # Contact form
-│   └── Footer.tsx        # Footer
-└── lib/
-    └── figma-config.ts   # Figma design tokens (auto-updated)
-```
-
-## 🎨 Current Status
-
-✅ Project structure created  
-✅ All components scaffolded  
-✅ Tailwind CSS configured  
-⏳ Waiting for Figma file URL to fetch design specifications  
-⏳ Ready to download and integrate assets
-
-The landing page is **ready and waiting** - just need the Figma file URL to make it match exactly!
-
+© 2026 Avixr Technologies Pvt Ltd. All rights reserved.
