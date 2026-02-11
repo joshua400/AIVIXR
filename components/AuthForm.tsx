@@ -12,14 +12,28 @@ export default function AuthForm({ type }: AuthFormProps) {
     const [loading, setLoading] = useState(false)
     const isLogin = type === 'login'
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    // Check if keys are missing (for dev warning)
+    const keysMissing =
+        !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+        process.env.NEXT_PUBLIC_SUPABASE_URL.includes('placeholder') ||
+        !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY === 'placeholder'
+
+    const handleSubmit = () => {
         setLoading(true)
-        // The form will be submitted using the native form action (Server Action)
-        // but we use state to show loading spinner
     }
 
     return (
         <div className="glass-card p-8 md:p-10 w-full max-w-md mx-auto perspective-container">
+            {keysMissing && (
+                <div className="mb-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs flex gap-3">
+                    <AlertCircle size={16} className="shrink-0" />
+                    <div>
+                        <p className="font-bold mb-1">Configuration Required</p>
+                        <p>Supabase keys are missing or invalid. Check your .env.local file or Vercel settings.</p>
+                    </div>
+                </div>
+            )}
             <div className="text-center mb-10">
                 <h2 className="text-3xl font-bold mb-3 font-display">
                     {isLogin ? (

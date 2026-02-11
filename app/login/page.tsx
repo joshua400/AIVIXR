@@ -15,16 +15,16 @@ export default function LoginPage({
             <div className="w-full max-w-md relative z-10 space-y-4">
                 {/* Messages */}
                 {searchParams.message && (
-                    <div className="glass p-4 rounded-xl flex items-center gap-3 text-sm text-accent-light-blue border-accent-blue/20">
-                        <CheckCircle size={18} />
-                        {searchParams.message}
+                    <div className="bg-emerald-500/10 border border-emerald-500/20 p-4 rounded-xl flex items-center gap-3 text-sm text-emerald-400">
+                        <CheckCircle size={18} className="shrink-0" />
+                        <p>{searchParams.message}</p>
                     </div>
                 )}
 
                 {searchParams.error && (
-                    <div className="glass p-4 rounded-xl flex items-center gap-3 text-sm text-red-400 border-red-500/20">
-                        <AlertCircle size={18} />
-                        {searchParams.error}
+                    <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-xl flex items-center gap-3 text-sm text-red-400">
+                        <AlertCircle size={18} className="shrink-0" />
+                        <p>{searchParams.error}</p>
                     </div>
                 )}
 
