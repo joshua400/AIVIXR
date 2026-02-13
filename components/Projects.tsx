@@ -3,11 +3,11 @@
 import { ScrollReveal } from '@/hooks/useAnimations'
 
 const projects = [
-  { name: 'BrumBella', logo: '/brumbella-logo.png' },
-  { name: 'Q Simutron', logo: '/qsimutron.png' },
-  { name: 'Astrosolstice', logo: '/img2.png' },
-  { name: 'ATRIBS', logo: '/img6.png' },
-  { name: 'introto.in', logo: '/img5.png' },
+  { name: 'BrumBella', logo: '/brumbella-logo.png', url: 'https://www.brumbella.com' },
+  { name: 'Q Simutron', logo: '/qsimutron.png', url: 'https://tiny-croquembouche-2814e3.netlify.app/' },
+  { name: 'Astrosolstice', logo: '/img2.png', url: 'https://www.astrosolstice.com' },
+  { name: 'ATRIBS', logo: '/img6.png', url: 'https://www.atribs.com' },
+  { name: 'introto.in', logo: '/img5.png', url: 'https://www.introto.in' },
   { name: 'SEIKO MARAICA', logo: '/img4.png' },
 ]
 
@@ -32,9 +32,9 @@ export default function Projects() {
         </ScrollReveal>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.05}>
-              <div className="glass-card p-12 text-center group bg-calisto-gray/20 border-black/[0.03] hover:bg-white transition-all duration-300 shadow-none hover:shadow-xl hover:shadow-calisto-bright-blue/5">
+          {projects.map((project, index) => {
+            const Card = (
+              <div className={`glass-card p-12 text-center group bg-calisto-gray/20 border-black/[0.03] transition-all duration-300 shadow-none ${project.url ? 'hover:bg-white hover:shadow-xl hover:shadow-calisto-bright-blue/5' : ''}`}>
                 <div className="mb-6 flex justify-center h-20 items-center">
                   <img
                     src={project.logo}
@@ -46,8 +46,20 @@ export default function Projects() {
                   {project.name}
                 </h3>
               </div>
-            </ScrollReveal>
-          ))}
+            );
+
+            return (
+              <ScrollReveal key={index} delay={index * 0.05}>
+                {project.url ? (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer" className="block">
+                    {Card}
+                  </a>
+                ) : (
+                  Card
+                )}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>
