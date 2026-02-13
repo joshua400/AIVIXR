@@ -40,9 +40,6 @@ export default function Navigation() {
             <a href="/#pricing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
               Pricing
             </a>
-            <a href="/#blog" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              Blog
-            </a>
             <a href="/#contact" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
               Contact
             </a>
@@ -84,7 +81,6 @@ export default function Navigation() {
                 <a href="/#digital-marketing" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Digital Marketing</a>
                 <a href="/#projects" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Projects</a>
                 <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Pricing</a>
-                <a href="/#blog" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Blog</a>
                 <a href="/#contact" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Contact</a>
                 <a href="/#contact" onClick={() => setIsOpen(false)} className="btn-primary w-full py-4 text-center mt-4">Book a Call</a>
               </div>

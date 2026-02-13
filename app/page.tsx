@@ -9,7 +9,6 @@ import DigitalMarketing from '@/components/DigitalMarketing'
 import Founder from '@/components/Founder'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
-import Blog from '@/components/Blog'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -62,7 +61,6 @@ export default function Home() {
         <Founder />
         <Testimonials />
         <Pricing />
-        <Blog />
         <FAQ />
         <Contact />
         <Footer />

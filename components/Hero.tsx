@@ -45,29 +45,31 @@ export default function Hero() {
           </p>
         </ScrollReveal>
 
-        {/* CTA Buttons */}
+        {/* Central Orb Element */}
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
-            <a
-              href="#contact"
-              className="group relative inline-flex items-center gap-2 bg-calisto-blue text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-calisto-bright-blue transition-all duration-300 shadow-xl shadow-calisto-blue/20"
-            >
-              Get Started
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+          <div className="relative flex items-center justify-center py-12">
+            <a href="#contact" className="relative group cursor-pointer transition-transform duration-500 hover:scale-105">
+              {/* Outer Glows */}
+              <div className="absolute inset-[-40px] bg-calisto-bright-blue/20 rounded-full blur-[60px] animate-pulse group-hover:bg-calisto-bright-blue/30 transition-colors" />
+              <div className="absolute inset-[-20px] bg-calisto-blue/10 rounded-full blur-[40px] animate-pulse delay-700" />
 
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center bg-white text-calisto-dark px-8 py-4 rounded-xl text-lg font-bold border border-black/5 hover:border-calisto-blue/30 transition-all duration-300 shadow-sm"
-            >
-              Explore Services
+              {/* Main Orb */}
+              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-calisto-bright-blue via-calisto-blue to-calisto-bright-blue flex items-center justify-center overflow-hidden shadow-2xl shadow-calisto-bright-blue/40 border border-white/20">
+                {/* Surface Shine */}
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/30 to-transparent" />
+
+                {/* Internal Pulsing Core */}
+                <div className="absolute inset-4 rounded-full bg-white/10 blur-md animate-pulse" />
+
+                {/* Text */}
+                <span className="relative z-10 text-white font-bold text-lg md:text-xl tracking-wide uppercase">
+                  Get Started
+                </span>
+              </div>
+
+              {/* Orbital Rings - Optional/Decorative from design */}
+              <div className="absolute inset-[-30px] border border-calisto-bright-blue/10 rounded-full animate-spin-slow" />
+              <div className="absolute inset-[-60px] border border-calisto-bright-blue/5 rounded-full animate-spin-slow [animation-direction:reverse] [animation-duration:40s]" />
             </a>
           </div>
         </ScrollReveal>
