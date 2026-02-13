@@ -36,10 +36,10 @@ export default function About() {
               <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">The Company</span>
             </div>
             <h2 className="font-tight text-4xl md:text-6xl font-bold mb-6 text-calisto-dark tracking-tight">
-              About <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">Avixr</span>
+              About <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">AVIXR</span>
             </h2>
             <p className="text-calisto-dark/50 text-lg max-w-3xl mx-auto font-manrope font-medium leading-relaxed">
-              Avixr Technologies Pvt Ltd is a research-driven software company founded by KV Avinash Sarma.
+              AVIXR Technologies Pvt Ltd is a research-driven software company founded by KV Avinash Sarma.
               We excel in transforming visionary ideas into top-tier mobile and web solutions using
               highly efficient, scalable, and user-centric methods.
             </p>

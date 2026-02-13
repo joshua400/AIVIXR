@@ -6,22 +6,22 @@ import { Search, PenTool, Rocket } from "lucide-react";
 const steps = [
     {
         number: "1",
-        title: "Discover & Analyze",
-        description: "We analyze your current workflows to identify high-impact automation opportunities tailored to your specific needs.",
+        title: "Analyze & Define",
+        description: "We analyze your requirements to define high-impact digital solutions tailored to your specific business needs.",
         icon: Search,
         color: "blue",
     },
     {
         number: "2",
-        title: "Design & Build",
-        description: "Our team crafts a custom AI-driven solution tailored to your workflow, integrating seamlessly with your existing tools.",
+        title: "Design & Develop",
+        description: "Our team crafts custom software solutions tailored to your goals, ensuring high performance and scalability.",
         icon: PenTool,
         color: "purple",
     },
     {
         number: "3",
-        title: "Launch & Optimize",
-        description: "We deploy the automation, ensure a smooth rollout, and continuously refine it to maximize performance and ROI.",
+        title: "Deploy & Support",
+        description: "We ensure a smooth rollout and provide continuous support to help your business grow and evolve.",
         icon: Rocket,
         color: "cyan",
     },
@@ -50,7 +50,7 @@ export default function Process() {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl font-bold bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent mb-4"
                     >
-                        How We Bring Automation to Life
+                        Our Development Life Cycle
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Process() {
                         transition={{ delay: 0.2 }}
                         className="text-lg text-muted-foreground max-w-2xl mx-auto"
                     >
-                        We understand your needs and build tailored AI solutions that drive real business results.
+                        A systematic approach to transforming your ideas into powerful digital solutions.
                     </motion.p>
                 </div>
 

@@ -36,7 +36,7 @@ export default function Founder() {
                   KV Avinash Sarma
                 </h3>
                 <p className="text-xl text-calisto-bright-blue mb-4 font-bold font-manrope uppercase tracking-wider text-sm">
-                  Founder & CEO - Avixr Technologies Pvt Ltd
+                  Founder & CEO - AVIXR Technologies Pvt Ltd
                 </p>
 
                 <p className="text-calisto-dark/60 leading-relaxed mb-6 font-manrope font-medium">

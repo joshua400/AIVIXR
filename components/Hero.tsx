@@ -24,51 +24,51 @@ export default function Hero() {
         <ScrollReveal delay={0}>
           <div className="inline-flex items-center gap-2 mb-8 bg-white border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-calisto-bright-blue animate-pulse" />
-            <span className="text-[12px] font-bold tracking-widest uppercase text-calisto-dark/60 font-manrope">The Future of AI is here</span>
+            <span className="text-[12px] font-bold tracking-widest uppercase text-calisto-dark/60 font-manrope">Innovate. Transform. Grow.</span>
           </div>
         </ScrollReveal>
 
         {/* Heading */}
         <ScrollReveal delay={0.1}>
-          <h1 className="font-tight text-5xl md:text-7xl lg:text-9xl font-bold mb-8 leading-[1] tracking-[-0.04em] text-calisto-dark">
-            AI-Powered Automation <br className="hidden lg:block" />
-            <span className="text-calisto-bright-blue">for Modern Teams</span>
+          <h1 className="font-tight text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1] tracking-tight text-calisto-dark">
+            <span className="text-calisto-blue">Simplifying complex ideas into </span> <br className="hidden lg:block" />
+            <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">
+              powerful, scalable digital solutions.
+            </span>
           </h1>
         </ScrollReveal>
 
         {/* Subtitle */}
         <ScrollReveal delay={0.2}>
-          <p className="text-lg md:text-xl text-calisto-dark/40 mb-16 max-w-2xl mx-auto leading-relaxed font-manrope font-medium">
-            Streamline operations, boost productivity, and scale smarter with AVIXR.
+          <p className="text-lg md:text-xl text-calisto-dark/50 mb-12 max-w-3xl mx-auto leading-relaxed font-manrope font-medium">
+            Smart solutions for complex challenges, simplified pathways to your success.
           </p>
         </ScrollReveal>
 
-        {/* Central Orb Element */}
+        {/* CTA Buttons */}
         <ScrollReveal delay={0.3}>
-          <div className="relative flex items-center justify-center py-12">
-            <div className="relative group cursor-pointer transition-transform duration-500 hover:scale-105">
-              {/* Outer Glows */}
-              <div className="absolute inset-[-40px] bg-calisto-bright-blue/20 rounded-full blur-[60px] animate-pulse group-hover:bg-calisto-bright-blue/30 transition-colors" />
-              <div className="absolute inset-[-20px] bg-calisto-blue/10 rounded-full blur-[40px] animate-pulse delay-700" />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
+            <a
+              href="#contact"
+              className="group relative inline-flex items-center gap-2 bg-calisto-blue text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-calisto-bright-blue transition-all duration-300 shadow-xl shadow-calisto-blue/20"
+            >
+              Get Started
+              <svg
+                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
 
-              {/* Main Orb */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-calisto-bright-blue via-calisto-blue to-calisto-bright-blue flex items-center justify-center overflow-hidden shadow-2xl shadow-calisto-bright-blue/40 border border-white/20">
-                {/* Surface Shine */}
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/30 to-transparent" />
-
-                {/* Internal Pulsing Core */}
-                <div className="absolute inset-4 rounded-full bg-white/10 blur-md animate-pulse" />
-
-                {/* Text */}
-                <span className="relative z-10 text-white font-bold text-lg md:text-xl tracking-wide uppercase">
-                  Get Started
-                </span>
-              </div>
-
-              {/* Orbital Rings - Optional/Decorative from design */}
-              <div className="absolute inset-[-30px] border border-calisto-bright-blue/10 rounded-full animate-spin-slow" />
-              <div className="absolute inset-[-60px] border border-calisto-bright-blue/5 rounded-full animate-spin-slow [animation-direction:reverse] [animation-duration:40s]" />
-            </div>
+            <a
+              href="#services"
+              className="inline-flex items-center justify-center bg-white text-calisto-dark px-8 py-4 rounded-xl text-lg font-bold border border-black/5 hover:border-calisto-blue/30 transition-all duration-300 shadow-sm"
+            >
+              Explore Services
+            </a>
           </div>
         </ScrollReveal>
       </div>

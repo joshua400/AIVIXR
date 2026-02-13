@@ -113,15 +113,30 @@ export default function DigitalMarketing() {
         </div>
 
         {/* Platforms We Leverage */}
-        <ScrollReveal>
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-calisto-dark font-tight">Platforms We Leverage</h3>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+        <div className="mt-20">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <h3 className="text-3xl font-bold text-calisto-dark font-tight">Platforms We Leverage</h3>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              { name: 'Google Ads', icon: '/google-ads.png', url: '#' },
-              { name: 'LinkedIn', icon: '/linkedin-ads.png', url: 'https://www.linkedin.com/company/avixr-private-limited/' },
-              { name: 'Instagram', icon: '/instagram-ads.png', url: 'https://www.instagram.com/avixr_pvt_ltd/' },
+              {
+                name: 'Google Ads',
+                icon: '/Screenshot 2025-12-29 at 4.27.19 PM.png',
+                url: 'https://share.google/DtNk1wkdKMF0j1ZrO'
+              },
+              {
+                name: 'LinkedIn',
+                icon: '/Screenshot 2025-12-29 at 4.30.37 PM.png',
+                url: 'https://www.linkedin.com/company/avixr-private-limited/'
+              },
+              {
+                name: 'Instagram',
+                icon: '/Screenshot 2025-12-29 at 4.29.26 PM.png',
+                url: 'https://www.instagram.com/avixr_pvt_ltd/'
+              },
             ].map((platform, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <a
@@ -138,11 +153,11 @@ export default function DigitalMarketing() {
               </ScrollReveal>
             ))}
           </div>
-        </ScrollReveal>
+        </div>
 
         {/* Tags row */}
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-20 flex flex-wrap items-center justify-center gap-4">
             {['Smart Analytics', 'Real-Time Collaboration', 'Task Prioritization'].map((tag, i) => (
               <span key={i} className="inline-flex items-center gap-2 bg-calisto-gray border border-black/5 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-calisto-dark/40 font-manrope">{tag}</span>
             ))}

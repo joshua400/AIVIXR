@@ -127,14 +127,15 @@ export default function Pricing() {
                                 ))}
                             </div>
 
-                            <button
-                                className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${plan.popular
-                                    ? "bg-primary text-primary-foreground hover:opacity-90 shadow-lg shadow-primary/20"
-                                    : "bg-foreground text-background hover:opacity-90"
+                            <a
+                                href="#contact"
+                                className={`w-full py-4 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2 ${plan.popular
+                                        ? 'bg-calisto-bright-blue text-white shadow-lg shadow-calisto-bright-blue/25 hover:bg-calisto-blue'
+                                        : 'bg-white text-calisto-dark border border-black/5 hover:border-calisto-bright-blue/30'
                                     }`}
                             >
                                 {plan.cta}
-                            </button>
+                            </a>
                         </motion.div>
                     ))}
                 </div>

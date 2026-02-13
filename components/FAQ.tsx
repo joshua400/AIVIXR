@@ -5,8 +5,8 @@ import { ScrollReveal } from '@/hooks/useAnimations'
 
 const faqs = [
     {
-        question: 'What makes Avixr Technologies unique?',
-        answer: 'Avixr Technologies is a research-driven company that specializes in transforming visionary ideas into top-tier mobile and web solutions. We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business impact.',
+        question: 'What makes AVIXR Technologies unique?',
+        answer: 'AVIXR Technologies is a research-driven company that specializes in transforming visionary ideas into top-tier mobile and web solutions. We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business impact.',
     },
     {
         question: 'Can you customize solutions to match our brand?',

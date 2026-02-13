@@ -67,7 +67,7 @@ export default function Services() {
               What we <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">offer</span>
             </h2>
             <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
-              We deliver innovative and reliable AI-driven solutions across multiple domains
+              AVIXR Technologies Pvt Ltd delivers innovative and reliable IT solutions across multiple domains
             </p>
           </div>
         </ScrollReveal>

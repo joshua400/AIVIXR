@@ -3,14 +3,14 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Avixr Technologies - Digital Solutions & Software Development',
-    template: '%s | Avixr Technologies'
+    default: 'AVIXR Technologies - Digital Solutions & Software Development',
+    template: '%s | AVIXR Technologies'
   },
-  description: 'Avixr Technologies Pvt Ltd is a research-driven software company specializing in transforming visionary ideas into top-tier mobile and web solutions. Expert development services with cutting-edge technologies.',
-  keywords: ['software development', 'web development', 'mobile app development', 'digital solutions', 'custom software', 'Avixr Technologies', 'software company'],
-  authors: [{ name: 'Avixr Technologies' }],
-  creator: 'Avixr Technologies Pvt Ltd',
-  publisher: 'Avixr Technologies Pvt Ltd',
+  description: 'AVIXR Technologies Pvt Ltd is a research-driven software company specializing in transforming visionary ideas into top-tier mobile and web solutions. Expert development services with cutting-edge technologies.',
+  keywords: ['software development', 'web development', 'mobile app development', 'digital solutions', 'custom software', 'AVIXR Technologies', 'software company'],
+  authors: [{ name: 'AVIXR Technologies' }],
+  creator: 'AVIXR Technologies Pvt Ltd',
+  publisher: 'AVIXR Technologies Pvt Ltd',
   metadataBase: new URL('https://www.avixr.in'),
   alternates: {
     canonical: '/',
@@ -19,21 +19,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.avixr.in',
-    siteName: 'Avixr Technologies',
-    title: 'Avixr Technologies - Digital Solutions & Software Development',
+    siteName: 'AVIXR Technologies',
+    title: 'AVIXR Technologies - Digital Solutions & Software Development',
     description: 'Transforming visionary ideas into top-tier mobile and web solutions. Expert software development with cutting-edge technologies.',
     images: [
       {
         url: '/avixr-wings-logo.jpeg',
         width: 1200,
         height: 630,
-        alt: 'Avixr Technologies Logo',
+        alt: 'AVIXR Technologies Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Avixr Technologies - Digital Solutions & Software Development',
+    title: 'AVIXR Technologies - Digital Solutions & Software Development',
     description: 'Transforming visionary ideas into top-tier mobile and web solutions.',
     images: ['/avixr-wings-logo.jpeg'],
   },

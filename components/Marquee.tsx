@@ -4,23 +4,23 @@ export default function Marquee() {
     const topItems = [
         'Web Development',
         'Mobile Apps',
-        'AI Solutions',
-        'Cloud Services',
+        'AI & Machine Learning',
+        'Cloud Solutions',
         'UI/UX Design',
-        'Automation',
+        'Custom Software',
         'Digital Marketing',
         'Technical Consulting',
     ]
 
     const bottomItems = [
-        'Real-Time Analytics',
-        'Custom Software',
-        'LMS Solutions',
-        'ERP Systems',
-        'Web3 Integration',
-        'Machine Learning',
-        'Data Insights',
+        'Real-Time Insights',
+        'LMS & ERP Systems',
+        'Automation',
         'Scalable Architecture',
+        'Web3 Solutions',
+        'Data Analytics',
+        'Innovation',
+        'Strategic Growth',
     ]
 
     return (

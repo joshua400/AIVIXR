@@ -71,7 +71,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-20 pt-10 border-t border-black/[0.03] flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-calisto-dark/40 text-[13px] font-manrope font-bold uppercase tracking-wider">
-            © {new Date().getFullYear()} Avixr Technologies Pvt Ltd.
+            © {new Date().getFullYear()} AVIXR Technologies Pvt Ltd.
           </p>
           <p className="text-calisto-bright-blue/60 text-[12px] font-bold font-manrope uppercase tracking-[0.2em] flex items-center gap-2">
             Build for the future <span className="text-lg">🌱</span>

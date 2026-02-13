@@ -1,6 +1,6 @@
-# Avixr Technologies Website
+# AVIXR Technologies Website
 
-Official website for Avixr Technologies Pvt Ltd, a research-driven software company specializing in AI, web development, and digital solutions.
+Official website for AVIXR Technologies Pvt Ltd, a research-driven software company specializing in AI, web development, and digital solutions.
 
 ## 🚀 Overview
 
