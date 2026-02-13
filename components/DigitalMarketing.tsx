@@ -100,7 +100,7 @@ export default function DigitalMarketing() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
           {features.map((feature, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
               <div className="glass-card p-10 h-full group bg-white border-black/5 shadow-md hover:shadow-xl transition-all duration-300">
@@ -112,9 +112,37 @@ export default function DigitalMarketing() {
           ))}
         </div>
 
+        {/* Platforms We Leverage */}
+        <ScrollReveal>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-bold text-calisto-dark font-tight">Platforms We Leverage</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+            {[
+              { name: 'Google Ads', icon: '/google-ads.png', url: '#' },
+              { name: 'LinkedIn', icon: '/linkedin-ads.png', url: 'https://www.linkedin.com/company/avixr-private-limited/' },
+              { name: 'Instagram', icon: '/instagram-ads.png', url: 'https://www.instagram.com/avixr_pvt_ltd/' },
+            ].map((platform, index) => (
+              <ScrollReveal key={index} delay={index * 0.1}>
+                <a
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-card p-8 flex flex-col items-center justify-center bg-white border-black/5 hover:border-calisto-blue/20 transition-all duration-300 group"
+                >
+                  <div className="w-16 h-16 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img src={platform.icon} alt={platform.name} className="w-12 h-12 object-contain" />
+                  </div>
+                  <h4 className="font-bold text-calisto-dark">{platform.name}</h4>
+                </a>
+              </ScrollReveal>
+            ))}
+          </div>
+        </ScrollReveal>
+
         {/* Tags row */}
         <ScrollReveal delay={0.3}>
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-16">
+          <div className="flex flex-wrap items-center justify-center gap-4">
             {['Smart Analytics', 'Real-Time Collaboration', 'Task Prioritization'].map((tag, i) => (
               <span key={i} className="inline-flex items-center gap-2 bg-calisto-gray border border-black/5 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-calisto-dark/40 font-manrope">{tag}</span>
             ))}

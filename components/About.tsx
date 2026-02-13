@@ -2,36 +2,22 @@
 
 import { ScrollReveal } from '@/hooks/useAnimations'
 
-const benefits = [
+const whyChooseUs = [
   {
-    icon: '💰',
-    title: 'Instant Savings',
-    description: 'Get immediate savings on every project, powered by efficient processes to optimize your budget.',
+    title: 'Cutting-Edge Tech',
+    description: 'Expertise in modern frameworks and scalable architectures.',
   },
   {
-    icon: '📊',
-    title: 'Real-Time Insights',
-    description: 'Make smarter decisions with live data and actionable insights, delivered in real-time to stay ahead.',
+    title: 'Customized Solutions',
+    description: 'Tailored specifically to your unique business requirements.',
   },
   {
-    icon: '🔧',
-    title: 'Flexible Solutions',
-    description: 'Solutions that adapt to your business needs, offering unparalleled scalability and cost-effectiveness.',
+    title: 'Quality Delivery',
+    description: 'On-time delivery with uncompromised attention to detail.',
   },
   {
-    icon: '🔒',
-    title: 'Secure Development',
-    description: 'Prioritize safety with cutting-edge encryption and robust security features for every project.',
-  },
-  {
-    icon: '🤖',
-    title: 'Adaptive Systems',
-    description: 'Leverage AI-driven systems that evolve with your business, ensuring efficiency at every step.',
-  },
-  {
-    icon: '🎯',
-    title: 'Dedicated Support',
-    description: 'Access expert assistance 24/7 to ensure you\'re never alone on your growth journey.',
+    title: 'End-to-End Support',
+    description: 'From initial ideation to long-term post-launch maintenance.',
   },
 ]
 
@@ -47,40 +33,23 @@ export default function About() {
         <ScrollReveal>
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 mb-4 bg-white border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
-              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">The Benefits</span>
+              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">The Company</span>
             </div>
             <h2 className="font-tight text-4xl md:text-6xl font-bold mb-6 text-calisto-dark tracking-tight">
-              Why choose <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">us?</span>
+              About <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">Avixr</span>
             </h2>
-            <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
-              Innovative tools and powerful insights designed to elevate your business and streamline your growth.
+            <p className="text-calisto-dark/50 text-lg max-w-3xl mx-auto font-manrope font-medium leading-relaxed">
+              Avixr Technologies Pvt Ltd is a research-driven software company founded by KV Avinash Sarma.
+              We excel in transforming visionary ideas into top-tier mobile and web solutions using
+              highly efficient, scalable, and user-centric methods.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Benefits grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {benefits.map((benefit, index) => (
-            <ScrollReveal key={index} delay={index * 0.05}>
-              <div className="glass-card p-10 h-full group bg-white border-black/[0.03] hover:border-calisto-bright-blue/20 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-calisto-bright-blue/5">
-                <div className="mb-6 w-14 h-14 rounded-2xl bg-calisto-gray flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-calisto-dark group-hover:text-calisto-bright-blue transition-colors font-tight">
-                  {benefit.title}
-                </h3>
-                <p className="text-calisto-dark/50 leading-relaxed text-[15px] font-manrope font-medium">
-                  {benefit.description}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Company info cards below */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Vision & Mission Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <ScrollReveal delay={0.1}>
-            <div className="glass-card p-10 bg-white border-black/5 shadow-md">
+            <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-12 h-12 bg-calisto-blue/10 rounded-xl flex items-center justify-center">
                   <img src="/vision.png" alt="Vision" className="h-6 w-6 object-contain" />
@@ -88,14 +57,14 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Vision</h3>
               </div>
               <p className="text-calisto-dark/50 leading-relaxed font-manrope font-medium">
-                At Avixr Technologies, we envision a world where technology empowers businesses to
-                achieve their full potential. Our goal is to lead the industry by delivering groundbreaking
-                digital solutions that drive innovation and foster growth.
+                We envision a world where technology empowers businesses to achieve their full potential.
+                Our goal is to lead the industry by delivering groundbreaking digital solutions
+                that drive innovation, foster growth, and create lasting impact.
               </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <div className="glass-card p-10 bg-white border-black/5 shadow-md">
+            <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-12 h-12 bg-calisto-bright-blue/10 rounded-xl flex items-center justify-center">
                   <img src="/mission.png" alt="Mission" className="h-6 w-6 object-contain" />
@@ -103,13 +72,29 @@ export default function About() {
                 <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Mission</h3>
               </div>
               <p className="text-calisto-dark/50 leading-relaxed font-manrope font-medium">
-                Transform Ideas into Reality — We transform innovative concepts into functional, high-quality
-                digital solutions that create meaningful impact. Each project undergoes rigorous evaluation
-                and refinement, ensuring measurable results.
+                Transform Ideas into Reality — We transform innovative concepts into functional,
+                high-quality digital solutions that create meaningful impact. Each project undergoes
+                rigorous evaluation and refinement to ensure innovation and quality.
               </p>
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Why Choose Us Grid */}
+        <ScrollReveal delay={0.3}>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-calisto-dark font-tight">Why Choose Us</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {whyChooseUs.map((item, index) => (
+              <div key={index} className="glass-card p-8 bg-white/50 border-black/[0.03] hover:border-calisto-blue/20 transition-all duration-300">
+                <div className="text-calisto-blue mb-4 font-bold">0{index + 1}</div>
+                <h4 className="text-lg font-bold text-calisto-dark mb-2 font-tight">{item.title}</h4>
+                <p className="text-calisto-dark/50 text-sm font-manrope font-medium">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   )

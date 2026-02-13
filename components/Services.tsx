@@ -5,33 +5,48 @@ import { ScrollReveal } from '@/hooks/useAnimations'
 const services = [
   {
     icon: '/software.png',
-    title: 'Custom AI Chatbots',
-    description: 'We build AI-powered chatbots that handle customer inquiries, qualify users, and collect structured data 24/7.',
+    title: 'Web Development',
+    description: 'Modern, responsive websites built with cutting-edge technologies',
   },
   {
     icon: '/mobile.png',
-    title: 'Content Generation',
-    description: 'We use AI to create high-quality content at scale, from blog posts, images and videos, tailored to your brand voice.',
+    title: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications',
   },
   {
     icon: '/soft.png',
-    title: 'Workflow Automation',
-    description: 'Identify bottlenecks and map out opportunities to streamline your business operations with intelligent automation.',
+    title: 'Software Development',
+    description: 'Custom software solutions tailored to your needs',
   },
   {
     icon: '/la.png',
-    title: 'AI-Powered Decision Making',
-    description: 'Leverage intelligent automation that understands context, adapts to inputs, and takes smart actions for your team.',
+    title: 'UI/UX & Graphic Designing',
+    description: 'Beautiful, user-friendly designs that engage and convert',
   },
   {
     icon: '/technical.png',
-    title: 'Business Consulting',
-    description: 'Expert guidance on how to integrate AI into your specific business model for maximum ROI and efficiency.',
+    title: 'Technical Consulting',
+    description: 'Expert guidance for your technology decisions',
   },
   {
     icon: '/lms.png',
-    title: 'Task Management',
-    description: 'Organize and automate complex workflows with smart task tracking and automated priority assignment.',
+    title: 'LMS & ERP Solutions',
+    description: 'Comprehensive learning and enterprise resource planning systems',
+  },
+  {
+    icon: '/auto.png',
+    title: 'Automation',
+    description: 'Streamline your processes with intelligent automation',
+  },
+  {
+    icon: '/ai.png',
+    title: 'AI, ML & Web3',
+    description: 'Next-generation technologies for future-ready solutions',
+  },
+  {
+    icon: '/digi.png',
+    title: 'Digital Marketing',
+    description: 'Data-driven strategies to boost your online presence',
   },
 ]
 

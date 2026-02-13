@@ -3,7 +3,10 @@ import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
 import Marquee from '@/components/Marquee'
+import About from '@/components/About'
 import Projects from '@/components/Projects'
+import DigitalMarketing from '@/components/DigitalMarketing'
+import Founder from '@/components/Founder'
 import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import Blog from '@/components/Blog'
@@ -51,9 +54,12 @@ export default function Home() {
         <Navigation />
         <Hero />
         <Services />
+        <About />
         <Process />
         <Marquee />
+        <DigitalMarketing />
         <Projects />
+        <Founder />
         <Testimonials />
         <Pricing />
         <Blog />
