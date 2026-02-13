@@ -9,38 +9,30 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-        <div className="glass rounded-full px-8 py-3 flex items-center justify-between border-black/5 shadow-sm">
+      <div className="mx-auto flex justify-center px-4 sm:px-6 lg:px-8 py-4">
+        <div className="glass rounded-full px-8 py-2.5 flex items-center gap-12 border-black/5 shadow-sm">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <img
-              src="/avixrlogo.png"
-              alt="AVIXR Logo"
-              className="h-8 w-auto object-contain"
-            />
+          <a href="/" className="flex items-center gap-2 group">
+            <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent font-tight">
+              AVIXR
+            </span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-10">
-            <a href="/#about" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              About
-            </a>
-            <a href="/#services" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              Services
-            </a>
-            <a href="/#process" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+          <div className="hidden lg:flex items-center gap-2">
+            <a href="/#process" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
               Process
             </a>
-            <a href="/#digital-marketing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              Digital Marketing
+            <a href="/#services" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
+              Services
             </a>
-            <a href="/#projects" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+            <a href="/#projects" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
               Projects
             </a>
-            <a href="/#pricing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+            <a href="/#pricing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
               Pricing
             </a>
-            <a href="/#contact" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+            <a href="/#contact" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
               Contact
             </a>
           </div>
@@ -75,10 +67,8 @@ export default function Navigation() {
               className="lg:hidden bg-white border-t border-black/5 overflow-hidden"
             >
               <div className="flex flex-col gap-4 p-6">
-                <a href="/#about" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">About</a>
-                <a href="/#services" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Services</a>
                 <a href="/#process" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Process</a>
-                <a href="/#digital-marketing" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Digital Marketing</a>
+                <a href="/#services" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Services</a>
                 <a href="/#projects" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Projects</a>
                 <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Pricing</a>
                 <a href="/#contact" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Contact</a>
