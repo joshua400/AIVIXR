@@ -17,7 +17,7 @@ export default function Contact() {
               <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Get In Touch</span>
             </div>
             <h2 className="font-tight text-4xl md:text-5xl lg:text-7xl font-bold mb-6 text-calisto-dark tracking-tight">
-              Grow Now with <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">Avixr</span>
+              Grow Now with <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">AVIXR</span>
             </h2>
             <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
               Unlock the power of technology to drive smarter decisions and faster growth with our platform.
