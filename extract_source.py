@@ -1,8 +1,8 @@
 
 import os
 
-filepath = r"C:\Users\Joshua Ragiland\Downloads\saveweb2zip-com-calisto-framer-website\index.html"
-keywords = ["Starter", "Pro", "Enterprise", "Step 1", "Step 2", "Step 3", "Discovery", "Development", "Deployment", "Analysis", "Design"]
+filepath = r"C:\Users\Joshua Ragiland\Downloads\calisto.framer.website-framer-full-20260213160013\index.html"
+keywords = ["Starter", "Pro", "Enterprise", "Step 1", "Step 2", "Step 3", "Latest News", "Insights"]
 
 if not os.path.exists(filepath):
     print(f"File not found: {filepath}")
@@ -15,13 +15,23 @@ with open(filepath, 'r', encoding='utf-8') as f:
 keywords = ["Latest News", "Insights", "AI", "Automation", "Future", "How to"]
 targets = [content.find("Blog"), content.find("Latest News")]
 
-with open(r"c:\avixr-main\extraction_results.txt", 'w', encoding='utf-8') as out:
-    # Look for <h3> within 20000 chars of any "Blog" mention
-    blog_pos = content.find("Blog")
-    if blog_pos != -1:
-        chunk = content[blog_pos:blog_pos+40000]
-        import re
-        titles = re.findall(r'<h[23][^>]*>(.*?)</h[23]>', chunk)
-        out.write(f"\n--- Titles found near Blog (pos {blog_pos}) ---\n")
-        for t in titles:
-            out.write(f"- {t}\n")
+with open(r"c:\avixr-main\extraction_results_full.txt", 'w', encoding='utf-8') as out:
+    for kw in keywords:
+        out.write(f"\n--- Matches for: {kw} ---\n")
+        pos = 0
+        while True:
+            pos = content.find(kw, pos)
+            if pos == -1: break
+            start = max(0, pos - 200)
+            end = min(len(content), pos + 1000)
+            snippet = content[start:end].replace('\n', ' ')
+            out.write(f"Position {pos}: ...{snippet}...\n")
+            pos += 1
+            if pos > content.find(kw, pos-1) + 5000: break
+
+    # Also look for <h3> specifically for blog
+    import re
+    h3_matches = re.findall(r'<h3[^>]*>(.*?)</h3>', content)
+    out.write("\n--- All H3 Tags (Potential Titles) ---\n")
+    for h3 in h3_matches:
+        out.write(f"- {h3}\n")

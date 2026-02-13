@@ -6,7 +6,7 @@ import { Search, PenTool, Rocket } from "lucide-react";
 const steps = [
     {
         number: "1",
-        title: "AI Readiness Audit",
+        title: "Discover & Analyze",
         description: "We analyze your current workflows to identify high-impact automation opportunities tailored to your specific needs.",
         icon: Search,
         color: "blue",

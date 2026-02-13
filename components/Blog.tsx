@@ -7,25 +7,28 @@ import Image from "next/image";
 
 const posts = [
     {
-        title: "How Calisto is Automating Modern Workflows",
-        category: "Insights",
-        date: "Feb 10, 2026",
-        image: "/images/blog-1.jpg", // Placeholder
-        link: "/blog/automating-workflows",
-    },
-    {
-        title: "The Future of AI in Enterprise Solutions",
-        category: "AI",
-        date: "Feb 5, 2026",
-        image: "/images/blog-2.jpg", // Placeholder
-        link: "/blog/future-of-ai",
-    },
-    {
-        title: "Scaling Smarter with AI-Driven Data",
+        title: "5 Business Processes You Should Automate Today",
+        description: "Discover the key areas where AI can immediately improve your team's efficiency.",
         category: "Automation",
-        date: "Jan 28, 2026",
-        image: "/images/blog-3.jpg", // Placeholder
-        link: "/blog/scaling-smarter",
+        date: "Feb 10, 2024",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+        link: "/blog/5-business-processes-you-should-automate-today",
+    },
+    {
+        title: "How We Automated 80% of a Creative Agency's Workflow",
+        description: "A deep dive into our recent success story helping a design team scale faster.",
+        category: "Case Study",
+        date: "Feb 8, 2024",
+        image: "https://images.unsplash.com/photo-1664575602554-2087b04935a5?auto=format&fit=crop&q=80&w=800",
+        link: "/blog/how-we-automated-80-of-a-creative-agency-s-workflow",
+    },
+    {
+        title: "Top 10 Tools We Love for Workflow Automation in 2025",
+        description: "Our curated list of the best AI tools for modern software development teams.",
+        category: "Resources",
+        date: "Feb 5, 2024",
+        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
+        link: "/blog/top-10-tools-we-love-for-workflow-automation-in-2025",
     },
 ];
 

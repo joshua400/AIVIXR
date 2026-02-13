@@ -5,48 +5,33 @@ import { ScrollReveal } from '@/hooks/useAnimations'
 const services = [
   {
     icon: '/software.png',
-    title: 'Web Development',
-    description: 'Modern, responsive websites built with cutting-edge technologies',
+    title: 'Custom AI Chatbots',
+    description: 'We build AI-powered chatbots that handle customer inquiries, qualify users, and collect structured data 24/7.',
   },
   {
     icon: '/mobile.png',
-    title: 'Mobile App Development',
-    description: 'Native and cross-platform mobile applications',
+    title: 'Content Generation',
+    description: 'We use AI to create high-quality content at scale, from blog posts, images and videos, tailored to your brand voice.',
   },
   {
     icon: '/soft.png',
-    title: 'Software Development',
-    description: 'Custom software solutions tailored to your needs',
+    title: 'Workflow Automation',
+    description: 'Identify bottlenecks and map out opportunities to streamline your business operations with intelligent automation.',
   },
   {
     icon: '/la.png',
-    title: 'UI/UX & Graphic Designing',
-    description: 'Beautiful, user-friendly designs that engage and convert',
+    title: 'AI-Powered Decision Making',
+    description: 'Leverage intelligent automation that understands context, adapts to inputs, and takes smart actions for your team.',
   },
   {
     icon: '/technical.png',
-    title: 'Technical Consulting',
-    description: 'Expert guidance for your technology decisions',
+    title: 'Business Consulting',
+    description: 'Expert guidance on how to integrate AI into your specific business model for maximum ROI and efficiency.',
   },
   {
     icon: '/lms.png',
-    title: 'LMS & ERP Solutions',
-    description: 'Comprehensive learning and enterprise resource planning systems',
-  },
-  {
-    icon: '/auto.png',
-    title: 'Automation',
-    description: 'Streamline your processes with intelligent automation',
-  },
-  {
-    icon: '/ai.png',
-    title: 'AI, ML & Web3',
-    description: 'Next-generation technologies for future-ready solutions',
-  },
-  {
-    icon: '/digi.png',
-    title: 'Digital Marketing',
-    description: 'Data-driven strategies to boost your online presence',
+    title: 'Task Management',
+    description: 'Organize and automate complex workflows with smart task tracking and automated priority assignment.',
   },
 ]
 

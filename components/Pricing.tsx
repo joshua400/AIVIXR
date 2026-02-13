@@ -11,9 +11,9 @@ const plans = [
         features: [
             "2 Custom Workflows",
             "Up to 3 Integrations",
+            "Real-Time Insights",
             "Email Support",
-            "Basic Dashboard Access",
-            "1 Revision Round",
+            "Secure & Reliable",
             "Pause or cancel anytime",
         ],
         cta: "Get started",
@@ -26,9 +26,10 @@ const plans = [
         features: [
             "5–7 Custom Workflows",
             "Up to 8 Integrations",
-            "Priority Email & Chat Support",
-            "Advanced Dashboard",
-            "2 Revision Rounds",
+            "Real-Time Insights",
+            "Priority Support",
+            "Secure & Reliable",
+            "Advanced Analytics",
             "Pause or cancel anytime",
         ],
         cta: "Get started",
@@ -41,10 +42,11 @@ const plans = [
         features: [
             "Unlimited Workflows",
             "Custom API Integration",
-            "Dedicated Account Manager",
-            "Onboarding & Team Training",
-            "Real-Time Monitoring & Support",
-            "Pause or cancel anytime",
+            "Dedicated Support",
+            "Real-Time Insights",
+            "Secure & Reliable",
+            "Onboarding & Training",
+            "Custom Terms",
         ],
         cta: "Get started",
         popular: false,
@@ -93,8 +95,8 @@ export default function Pricing() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                             className={`relative flex flex-col p-8 rounded-2xl border ${plan.popular
-                                    ? "border-primary bg-primary/[0.02] shadow-xl shadow-primary/5"
-                                    : "border-border bg-card"
+                                ? "border-primary bg-primary/[0.02] shadow-xl shadow-primary/5"
+                                : "border-border bg-card"
                                 }`}
                         >
                             {plan.popular && (
@@ -127,8 +129,8 @@ export default function Pricing() {
 
                             <button
                                 className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${plan.popular
-                                        ? "bg-primary text-primary-foreground hover:opacity-90 shadow-lg shadow-primary/20"
-                                        : "bg-foreground text-background hover:opacity-90"
+                                    ? "bg-primary text-primary-foreground hover:opacity-90 shadow-lg shadow-primary/20"
+                                    : "bg-foreground text-background hover:opacity-90"
                                     }`}
                             >
                                 {plan.cta}
