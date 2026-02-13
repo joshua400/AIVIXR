@@ -47,7 +47,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <main className="min-h-screen w-full bg-navy-darkest">
+      <main className="min-h-screen w-full bg-white">
         <Navigation />
         <Hero />
         <Services />
