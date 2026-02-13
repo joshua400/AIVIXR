@@ -5,7 +5,6 @@ import { ScrollReveal } from '@/hooks/useAnimations'
 const projects = [
   { name: 'BrumBella', logo: '/brumbella-logo.png' },
   { name: 'Q Simutron', logo: '/qsimutron.png' },
-  { name: 'Akasaperna', logo: '/img.png' },
   { name: 'Astrosolstice', logo: '/img2.png' },
   { name: 'ATRIBS', logo: '/img6.png' },
   { name: 'introto.in', logo: '/img5.png' },
