@@ -40,4 +40,4 @@ This website has been completely rebuilt with a premium modern SaaS design, feat
 
 ---
 
-© 2026 Avixr Technologies Pvt Ltd. All rights reserved.
+© 2026 AVIXR Technologies Pvt Ltd. All rights reserved.
