@@ -2,86 +2,79 @@ import { ScrollReveal } from '@/hooks/useAnimations'
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-glass-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+    <footer className="relative bg-white border-t border-black/[0.03] overflow-hidden">
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] rounded-full bg-calisto-blue/5 blur-[100px]" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <a href="/" className="inline-block mb-4">
+            <a href="/" className="inline-block mb-6 scale-90 -ml-2">
               <img src="/avixrlogo.png" alt="AVIXR" className="h-10 w-auto" />
             </a>
-            <p className="text-white/40 text-sm leading-relaxed">
-              Transforming visionary ideas into top-tier digital solutions.
+            <p className="text-calisto-dark/50 text-base leading-relaxed font-manrope font-medium">
+              Transforming visionary ideas into top-tier digital solutions with the power of modern technology.
             </p>
           </div>
 
           {/* Links */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
-              <li><a href="#about" className="text-white/40 hover:text-white transition-colors text-sm">About Us</a></li>
-              <li><a href="#services" className="text-white/40 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="#projects" className="text-white/40 hover:text-white transition-colors text-sm">Projects</a></li>
+          <div className="md:pl-10">
+            <h4 className="text-calisto-dark font-bold mb-6 font-tight text-lg uppercase tracking-wider text-[13px]">Company</h4>
+            <ul className="space-y-4">
+              <li><a href="#about" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">About Us</a></li>
+              <li><a href="#services" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Services</a></li>
+              <li><a href="#projects" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Projects</a></li>
             </ul>
           </div>
 
           {/* More links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              <li><a href="#digital-marketing" className="text-white/40 hover:text-white transition-colors text-sm">Digital Marketing</a></li>
-              <li><a href="#founder" className="text-white/40 hover:text-white transition-colors text-sm">Founder</a></li>
-              <li><a href="#contact" className="text-white/40 hover:text-white transition-colors text-sm">Contact</a></li>
+            <h4 className="text-calisto-dark font-bold mb-6 font-tight text-lg uppercase tracking-wider text-[13px]">Resources</h4>
+            <ul className="space-y-4">
+              <li><a href="#faq" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">FAQs</a></li>
+              <li><a href="#founder" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Founder</a></li>
+              <li><a href="#contact" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Contact</a></li>
             </ul>
           </div>
 
           {/* Contact + Social */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
-            <div className="space-y-3 mb-6">
-              <a href="mailto:ceo@avixr.in" className="text-white/40 hover:text-white transition-colors text-sm block">
+            <h4 className="text-calisto-dark font-bold mb-6 font-tight text-lg uppercase tracking-wider text-[13px]">Get in Touch</h4>
+            <div className="space-y-4 mb-8">
+              <a href="mailto:ceo@avixr.in" className="text-calisto-dark font-bold text-lg hover:text-calisto-bright-blue transition-colors block font-tight tracking-tight">
                 ceo@avixr.in
               </a>
-              <p className="text-white/40 text-sm">Chennai, India</p>
+              <p className="text-calisto-dark/50 text-base font-manrope font-medium">Chennai, India</p>
             </div>
 
             {/* Social icons */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/avixr-private-limited/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass flex items-center justify-center hover:bg-accent-blue/10 transition-colors"
-              >
-                <img src="/Screenshot 2025-12-29 at 4.30.37 PM.png" alt="LinkedIn" className="h-5 w-5 object-contain" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass flex items-center justify-center hover:bg-accent-blue/10 transition-colors"
-              >
-                <img src="/youtube.png" alt="YouTube" className="h-5 w-5 object-contain" />
-              </a>
-              <a
-                href="https://www.instagram.com/avixr_pvt_ltd/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg glass flex items-center justify-center hover:bg-accent-blue/10 transition-colors"
-              >
-                <img src="/Screenshot 2025-12-29 at 4.29.26 PM.png" alt="Instagram" className="h-5 w-5 object-contain" />
-              </a>
+            <div className="flex items-center gap-4">
+              {[
+                { name: 'LinkedIn', icon: '/Screenshot 2025-12-29 at 4.30.37 PM.png', url: 'https://www.linkedin.com/company/avixr-private-limited/' },
+                { name: 'YouTube', icon: '/youtube.png', url: 'https://youtube.com' },
+                { name: 'Instagram', icon: '/Screenshot 2025-12-29 at 4.29.26 PM.png', url: 'https://www.instagram.com/avixr_pvt_ltd/' },
+              ].map((social, i) => (
+                <a
+                  key={i}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-2xl bg-calisto-gray flex items-center justify-center hover:bg-calisto-dark hover:text-white transition-all duration-300 border border-black/[0.03] shadow-sm hover:-translate-y-1"
+                >
+                  <img src={social.icon} alt={social.name} className="h-5 w-5 object-contain" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-glass-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-sm">
-            © {new Date().getFullYear()} Avixr Technologies Pvt Ltd. All rights reserved.
+        <div className="mt-20 pt-10 border-t border-black/[0.03] flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-calisto-dark/40 text-[13px] font-manrope font-bold uppercase tracking-wider">
+            © {new Date().getFullYear()} Avixr Technologies Pvt Ltd.
           </p>
-          <p className="text-white/20 text-xs">
-            Avixr contributes to building a greener future 🌱
+          <p className="text-calisto-bright-blue/60 text-[12px] font-bold font-manrope uppercase tracking-[0.2em] flex items-center gap-2">
+            Build for the future <span className="text-lg">🌱</span>
           </p>
         </div>
       </div>

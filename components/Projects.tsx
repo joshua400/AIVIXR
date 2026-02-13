@@ -14,38 +14,38 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 overflow-hidden">
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-accent-blue/5 blur-3xl" />
+    <section id="projects" className="relative py-24 overflow-hidden bg-white">
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-calisto-blue/5 blur-[100px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">
-            <div className="section-badge mb-4">OUR PROJECTS</div>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Key <span className="gradient-text">Projects</span>
+            <div className="inline-flex items-center gap-2 mb-4 bg-calisto-gray border border-black/5 px-4 py-1.5 rounded-full">
+              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Successful Collaborations</span>
+            </div>
+            <h2 className="font-tight text-4xl md:text-6xl font-bold mb-6 text-calisto-dark tracking-tight">
+              Our <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">projects</span>
             </h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto">
-              Explore some of our successful collaborations
+            <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
+              Explore some of our successful collaborations and high-impact digital solutions
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
-            <ScrollReveal key={index} delay={index * 0.08}>
-              <div className="glass-card p-8 text-center group perspective-container">
-                <div className="tilt-3d">
-                  <div className="mb-4 flex justify-center h-16 items-center">
-                    <img
-                      src={project.logo}
-                      alt={project.name}
-                      className="h-14 w-auto object-contain filter brightness-90 group-hover:brightness-110 transition-all"
-                    />
-                  </div>
-                  <h3 className="text-lg font-bold text-white/80 group-hover:text-white transition-colors">
-                    {project.name}
-                  </h3>
+            <ScrollReveal key={index} delay={index * 0.05}>
+              <div className="glass-card p-12 text-center group bg-calisto-gray/20 border-black/[0.03] hover:bg-white transition-all duration-300 shadow-none hover:shadow-xl hover:shadow-calisto-bright-blue/5">
+                <div className="mb-6 flex justify-center h-20 items-center">
+                  <img
+                    src={project.logo}
+                    alt={project.name}
+                    className="h-14 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-100"
+                  />
                 </div>
+                <h3 className="text-base font-bold text-calisto-dark/40 group-hover:text-calisto-dark transition-colors font-tight uppercase tracking-widest text-[12px]">
+                  {project.name}
+                </h3>
               </div>
             </ScrollReveal>
           ))}

@@ -30,43 +30,41 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0)
 
     return (
-        <section className="relative py-24 overflow-hidden">
-            <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-accent-blue/5 blur-3xl" />
+        <section className="relative py-32 overflow-hidden bg-calisto-gray/30">
+            <div className="absolute top-1/2 right-0 w-[400px] h-[400px] rounded-full bg-calisto-bright-blue/5 blur-[120px]" />
 
             <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
-                    <div className="text-center mb-16">
-                        <div className="section-badge mb-4">FAQ&apos;S SECTION</div>
-                        <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-                            Some Common <span className="gradient-text">FAQ&apos;s</span>
+                    <div className="text-center mb-20">
+                        <div className="inline-flex items-center gap-2 mb-4 bg-white border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
+                            <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Questions & Answers</span>
+                        </div>
+                        <h2 className="font-tight text-4xl md:text-5xl font-bold mb-6 text-calisto-dark tracking-tight">
+                            Common <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">FAQs</span>
                         </h2>
-                        <p className="text-white/50 text-lg max-w-2xl mx-auto">
-                            Get answers to your questions and learn about our platform
+                        <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
+                            Get answers to your questions and learn about our innovative solutions
                         </p>
                     </div>
                 </ScrollReveal>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <ScrollReveal key={index} delay={index * 0.08}>
-                            <div className="faq-item bg-navy-surface/60">
+                        <ScrollReveal key={index} delay={index * 0.05}>
+                            <div className={`faq-item bg-white border-black/[0.03] transition-all duration-300 ${openIndex === index ? 'shadow-lg border-calisto-bright-blue/10' : 'shadow-sm'}`}>
                                 <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                    className="w-full flex items-center justify-between p-6 text-left"
+                                    className="w-full flex items-center justify-between p-7 text-left"
                                 >
-                                    <span className="text-white font-semibold pr-4">{faq.question}</span>
-                                    <svg
-                                        className={`w-5 h-5 text-accent-blue flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''
-                                            }`}
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                    </svg>
+                                    <span className="text-calisto-dark font-bold text-lg font-tight tracking-tight">{faq.question}</span>
+                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-calisto-dark text-white rotate-180' : 'bg-calisto-gray text-calisto-dark'}`}>
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                        </svg>
+                                    </div>
                                 </button>
                                 <div className={`faq-content ${openIndex === index ? 'open' : ''}`}>
-                                    <p className="px-6 pb-6 text-white/50 leading-relaxed">
+                                    <p className="px-7 pb-7 text-calisto-dark/50 border-t border-black/[0.03] pt-5 leading-relaxed font-manrope font-medium">
                                         {faq.answer}
                                     </p>
                                 </div>

@@ -9,6 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        calisto: {
+          white: '#ffffff',
+          gray: '#f5f5f5',
+          dark: '#0d0d0d',
+          blue: '#255ccc',
+          'bright-blue': '#308dff',
+        },
         navy: {
           DEFAULT: '#031457',
           dark: '#020e3a',
@@ -31,6 +38,8 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+        tight: ['Inter Tight', 'sans-serif'],
+        manrope: ['Manrope', 'sans-serif'],
       },
       animation: {
         'marquee-left': 'marquee-left 25s linear infinite',
