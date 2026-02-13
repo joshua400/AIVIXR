@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="md:pl-10">
             <h4 className="text-calisto-dark font-bold mb-6 font-tight text-lg uppercase tracking-wider text-[13px]">Company</h4>
             <ul className="space-y-4">
-              <li><a href="#about" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">About Us</a></li>
+              <li><a href="#process" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Process</a></li>
               <li><a href="#services" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Services</a></li>
               <li><a href="#projects" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Projects</a></li>
             </ul>
@@ -31,8 +31,8 @@ export default function Footer() {
           <div>
             <h4 className="text-calisto-dark font-bold mb-6 font-tight text-lg uppercase tracking-wider text-[13px]">Resources</h4>
             <ul className="space-y-4">
-              <li><a href="#faq" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">FAQs</a></li>
-              <li><a href="#founder" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Founder</a></li>
+              <li><a href="#pricing" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Pricing</a></li>
+              <li><a href="#blog" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Blog</a></li>
               <li><a href="#contact" className="text-calisto-dark/50 hover:text-calisto-bright-blue transition-colors text-base font-manrope font-medium">Contact</a></li>
             </ul>
           </div>

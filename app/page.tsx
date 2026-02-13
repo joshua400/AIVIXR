@@ -1,12 +1,12 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
-import About from '@/components/About'
+import Process from '@/components/Process'
 import Marquee from '@/components/Marquee'
 import Projects from '@/components/Projects'
-import DigitalMarketing from '@/components/DigitalMarketing'
 import Testimonials from '@/components/Testimonials'
-import Founder from '@/components/Founder'
+import Pricing from '@/components/Pricing'
+import Blog from '@/components/Blog'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
@@ -51,12 +51,12 @@ export default function Home() {
         <Navigation />
         <Hero />
         <Services />
-        <About />
+        <Process />
         <Marquee />
         <Projects />
-        <DigitalMarketing />
         <Testimonials />
-        <Founder />
+        <Pricing />
+        <Blog />
         <FAQ />
         <Contact />
         <Footer />

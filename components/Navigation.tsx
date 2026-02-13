@@ -20,17 +20,20 @@ export default function Navigation() {
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-10">
-            <a href="/#home" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              Home
+            <a href="/#process" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+              Process
             </a>
             <a href="/#services" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
               Services
             </a>
-            <a href="/#about" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
-              About
-            </a>
             <a href="/#projects" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
               Projects
+            </a>
+            <a href="/#pricing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+              Pricing
+            </a>
+            <a href="/#blog" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
+              Blog
             </a>
             <a href="/#contact" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[13px] font-semibold font-manrope uppercase tracking-wider">
               Contact
@@ -43,7 +46,7 @@ export default function Navigation() {
               href="/#contact"
               className="btn-primary text-sm py-2.5 px-6 shadow-lg shadow-calisto-bright-blue/10"
             >
-              Get Started
+              Book a Call
             </a>
           </div>
 
@@ -67,10 +70,11 @@ export default function Navigation() {
         {isOpen && (
           <div className="lg:hidden mt-2 glass rounded-2xl p-6 animate-fade-in-up border-black/5">
             <div className="flex flex-col gap-4">
-              <a href="/#home" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Home</a>
+              <a href="/#process" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Process</a>
               <a href="/#services" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Services</a>
-              <a href="/#about" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">About</a>
               <a href="/#projects" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Projects</a>
+              <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Pricing</a>
+              <a href="/#blog" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Blog</a>
               <a href="/#contact" onClick={() => setIsOpen(false)} className="text-calisto-dark/70 hover:text-calisto-dark transition-colors font-semibold">Contact</a>
               <div className="pt-4 border-t border-black/5">
                 <a
@@ -78,7 +82,7 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className="btn-primary text-center text-sm py-3 px-6 flex items-center justify-center gap-2"
                 >
-                  Get Started
+                  Book a Call
                 </a>
               </div>
             </div>
