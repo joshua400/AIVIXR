@@ -1,6 +1,7 @@
 'use client'
 
 import { ScrollReveal } from '@/hooks/useAnimations'
+import { Globe, Linkedin, Instagram } from 'lucide-react'
 
 const services = [
   {
@@ -124,17 +125,17 @@ export default function DigitalMarketing() {
             {[
               {
                 name: 'Google Ads',
-                icon: '/Screenshot 2025-12-29 at 4.27.19 PM.png',
+                icon: <Globe className="w-12 h-12 text-calisto-blue" />,
                 url: 'https://share.google/DtNk1wkdKMF0j1ZrO'
               },
               {
                 name: 'LinkedIn',
-                icon: '/Screenshot 2025-12-29 at 4.30.37 PM.png',
+                icon: <Linkedin className="w-12 h-12 text-calisto-blue" />,
                 url: 'https://www.linkedin.com/company/avixr-private-limited/'
               },
               {
                 name: 'Instagram',
-                icon: '/Screenshot 2025-12-29 at 4.29.26 PM.png',
+                icon: <Instagram className="w-12 h-12 text-calisto-blue" />,
                 url: 'https://www.instagram.com/avixr_pvt_ltd/'
               },
             ].map((platform, index) => (
@@ -146,7 +147,7 @@ export default function DigitalMarketing() {
                   className="glass-card p-8 flex flex-col items-center justify-center bg-white border-black/5 hover:border-calisto-blue/20 transition-all duration-300 group"
                 >
                   <div className="w-16 h-16 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <img src={platform.icon} alt={platform.name} className="w-12 h-12 object-contain" />
+                    {platform.icon}
                   </div>
                   <h4 className="font-bold text-calisto-dark">{platform.name}</h4>
                 </a>

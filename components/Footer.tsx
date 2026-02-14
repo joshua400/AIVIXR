@@ -1,4 +1,5 @@
 import { ScrollReveal } from '@/hooks/useAnimations'
+import { Linkedin, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -50,9 +51,8 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex items-center gap-4">
               {[
-                { name: 'LinkedIn', icon: '/Screenshot 2025-12-29 at 4.30.37 PM.png', url: 'https://www.linkedin.com/company/avixr-private-limited/' },
-                { name: 'YouTube', icon: '/youtube.png', url: 'https://youtube.com' },
-                { name: 'Instagram', icon: '/Screenshot 2025-12-29 at 4.29.26 PM.png', url: 'https://www.instagram.com/avixr_pvt_ltd/' },
+                { name: 'LinkedIn', icon: <Linkedin className="h-5 w-5" />, url: 'https://www.linkedin.com/company/avixr-private-limited/' },
+                { name: 'Instagram', icon: <Instagram className="h-5 w-5" />, url: 'https://www.instagram.com/avixr_pvt_ltd/' },
               ].map((social, i) => (
                 <a
                   key={i}
@@ -61,7 +61,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-2xl bg-calisto-gray flex items-center justify-center hover:bg-calisto-dark hover:text-white transition-all duration-300 border border-black/[0.03] shadow-sm hover:-translate-y-1"
                 >
-                  <img src={social.icon} alt={social.name} className="h-5 w-5 object-contain" />
+                  {social.icon}
                 </a>
               ))}
             </div>
