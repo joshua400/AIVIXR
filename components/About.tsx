@@ -1,5 +1,6 @@
 'use client'
 
+import { Eye, Target } from 'lucide-react'
 import { ScrollReveal } from '@/hooks/useAnimations'
 
 const whyChooseUs = [
@@ -52,7 +53,7 @@ export default function About() {
             <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-12 h-12 bg-calisto-blue/10 rounded-xl flex items-center justify-center">
-                  <img src="/vision.png" alt="Vision" className="h-6 w-6 object-contain" />
+                  <Eye className="h-6 w-6 text-calisto-blue" />
                 </div>
                 <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Vision</h3>
               </div>
@@ -67,7 +68,7 @@ export default function About() {
             <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-12 h-12 bg-calisto-bright-blue/10 rounded-xl flex items-center justify-center">
-                  <img src="/mission.png" alt="Mission" className="h-6 w-6 object-contain" />
+                  <Target className="h-6 w-6 text-calisto-bright-blue" />
                 </div>
                 <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Mission</h3>
               </div>

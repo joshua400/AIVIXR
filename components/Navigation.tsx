@@ -13,9 +13,7 @@ export default function Navigation() {
         <div className="glass rounded-full px-8 py-2.5 flex items-center gap-12 border-black/5 shadow-sm">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
-            <span className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent font-tight">
-              AVIXR
-            </span>
+            <img src="/avixrlogo.png" alt="AVIXR Logo" className="h-7 w-auto" />
           </a>
 
           {/* Desktop Nav */}
