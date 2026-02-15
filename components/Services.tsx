@@ -48,8 +48,8 @@ const services = [
     color: '#F5F5F5'
   },
   {
-    icon: '/ai.png',
-    title: 'AI, ML & Web3',
+    icon: '/soft.png',
+    title: 'ML & Web3',
     description: 'Next-generation technologies for building future-ready digital solutions.',
     color: '#F0F0F0'
   },

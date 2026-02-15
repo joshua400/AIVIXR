@@ -12,7 +12,7 @@ with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
 
-keywords = ["Latest News", "Insights", "AI", "Automation", "Future", "How to"]
+keywords = ["Latest News", "Insights", "Automation", "Future", "How to"]
 targets = [content.find("Blog"), content.find("Latest News")]
 
 with open(r"c:\avixr-main\extraction_results_full.txt", 'w', encoding='utf-8') as out:

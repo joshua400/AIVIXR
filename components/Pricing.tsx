@@ -61,7 +61,7 @@ export default function Pricing() {
                         Flexible <span className="italic text-charcoal/70">Plans</span>
                     </h2>
                     <p className="text-lg text-charcoal/60 max-w-2xl mx-auto font-sans font-light">
-                        Choose the right plan to supercharge your workflow with AI-powered automation.
+                        Choose the right plan to supercharge your workflow with automation.
                     </p>
                 </div>
 

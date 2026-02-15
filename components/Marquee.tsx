@@ -62,7 +62,7 @@ export default function Marquee() {
     const topItems = [
         'Web Development',
         'Mobile Apps',
-        'AI & Machine Learning',
+        'Machine Learning',
         'Cloud Solutions',
         'UI/UX Design',
         'Custom Software',
