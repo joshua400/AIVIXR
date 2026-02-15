@@ -1,74 +1,79 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { Search, PenTool, Rocket } from "lucide-react";
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
-const steps = [
+const phases = [
     {
-        number: "01",
-        title: "Analyze & Define",
-        description: "We analyze your requirements to define high-impact digital solutions tailored to your specific business needs.",
-        icon: Search,
+        title: 'Define',
+        description: 'We identify macro-trends and structural gaps to originate scalable, high-impact digital opportunities.',
+        id: '01'
     },
     {
-        number: "02",
-        title: "Design & Develop",
-        description: "Our team crafts custom software solutions tailored to your goals, ensuring high performance and scalability.",
-        icon: PenTool,
+        title: 'Develop',
+        description: 'We strategize, engineer and structure projects through disciplined processes and partnerships.',
+        id: '02'
     },
     {
-        number: "03",
-        title: "Deploy & Support",
-        description: "We ensure a smooth rollout and provide continuous support to help your business grow and evolve.",
-        icon: Rocket,
+        title: 'Derisk',
+        description: 'We implement robust governance, testing, and optimization to mitigate risks and ensure long-term resilience.',
+        id: '03'
     },
-];
+    {
+        title: 'Deliver',
+        description: 'We execute and operate with precision, delivering sustainable, high-performance digital solutions.',
+        id: '04'
+    },
+]
 
 export default function Process() {
+    const container = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'end start']
+    })
+
+    // Horizontal scroll simulation or staggered fade up
     return (
-        <section id="process" className="py-32 relative overflow-hidden bg-white">
-            <div className="container mx-auto px-4 relative z-10">
-                <div className="text-center mb-24">
-                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">How We Work</span>
-                    <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
-                        Our <span className="italic text-charcoal/70">Development</span> Cycle
+        <section ref={container} id="process" className="relative py-32 bg-white overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-24"
+                >
+                    <h2 className="font-display text-5xl md:text-7xl font-bold mb-6 text-charcoal tracking-tight">
+                        From Vision to <span className="italic text-charcoal/70">Visible_</span>
                     </h2>
-                    <p className="text-lg text-charcoal/60 max-w-2xl mx-auto font-sans font-light">
-                        A systematic approach to transforming your ideas into powerful digital solutions.
+                    <p className="text-xl text-charcoal/60 max-w-2xl mx-auto font-sans font-light">
+                        Our method combines strategic development, innovation, and engineering discipline.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 relative max-w-6xl mx-auto">
-                    {/* Connector Line (visible on desktop) */}
-                    <div className="hidden lg:block absolute top-[45px] left-[15%] right-[15%] h-[1px] bg-charcoal/10 z-0" />
-
-                    {steps.map((step, index) => {
-                        const Icon = step.icon;
-                        return (
-                            <motion.div
-                                key={step.number}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.2 }}
-                                className="relative z-10 flex flex-col items-center text-center group"
-                            >
-                                <div className="w-24 h-24 rounded-full bg-white border border-charcoal/10 flex items-center justify-center mb-8 group-hover:border-accent-gold transition-colors duration-500 relative z-10">
-                                    <span className="absolute -top-2 -right-2 text-[10px] font-bold text-accent-gold bg-white px-2 py-1 rounded-full border border-charcoal/5">
-                                        {step.number}
-                                    </span>
-                                    <Icon className="w-8 h-8 text-charcoal/80 group-hover:text-charcoal transition-colors duration-500" />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {phases.map((phase, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.2, duration: 0.8 }}
+                            className="relative group"
+                        >
+                            <div className="h-full bg-charcoal text-white p-8 rounded-2xl flex flex-col justify-between min-h-[300px] border border-charcoal hover:border-accent-gold/50 transition-colors duration-500">
+                                <div>
+                                    <span className="text-xs font-bold text-accent-gold tracking-widest mb-4 block">{phase.id}</span>
+                                    <h3 className="text-2xl font-bold font-display mb-4">{phase.title}</h3>
                                 </div>
-
-                                <h3 className="text-xl font-bold mb-4 font-display text-charcoal">{step.title}</h3>
-                                <p className="text-charcoal/60 leading-relaxed font-sans text-sm px-4">
-                                    {step.description}
+                                <p className="text-white/60 font-light text-sm leading-relaxed">
+                                    {phase.description}
                                 </p>
-                            </motion.div>
-                        );
-                    })}
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
-    );
+    )
 }

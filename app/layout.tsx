@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import SmoothScroll from '@/components/SmoothScroll'
+import CustomCursor from '@/components/CustomCursor'
+import Preloader from '@/components/Preloader'
 
 export const metadata: Metadata = {
   title: {
@@ -83,7 +86,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-luxury-white text-charcoal antialiased selection:bg-accent-gold/20 selection:text-charcoal">{children}</body>
+      <body className="bg-luxury-white text-charcoal antialiased selection:bg-accent-gold/20 selection:text-charcoal cursor-none">
+        <SmoothScroll>
+          <Preloader />
+          <CustomCursor />
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   )
 }
