@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ScrollReveal } from '@/hooks/useAnimations'
+import { MotionReveal } from '@/hooks/useAnimations'
 import { Plus, Minus } from 'lucide-react'
 
 const faqs = [
@@ -33,18 +33,16 @@ export default function FAQ() {
     return (
         <section className="relative py-32 overflow-hidden bg-white">
             <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <ScrollReveal>
-                    <div className="text-center mb-20">
-                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">FAQ</span>
-                        <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
-                            Common <span className="italic text-charcoal/70">Questions</span>
-                        </h2>
-                    </div>
-                </ScrollReveal>
+                <MotionReveal className="text-center mb-20">
+                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">FAQ</span>
+                    <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
+                        Common <span className="italic text-charcoal/70">Questions</span>
+                    </h2>
+                </MotionReveal>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
-                        <ScrollReveal key={index} delay={index * 0.05}>
+                        <MotionReveal key={index} delay={index * 0.05}>
                             <div className={`group border-b border-charcoal/10 transition-all duration-300 ${openIndex === index ? 'pb-8' : ''}`}>
                                 <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -67,7 +65,7 @@ export default function FAQ() {
                                     </p>
                                 </div>
                             </div>
-                        </ScrollReveal>
+                        </MotionReveal>
                     ))}
                 </div>
             </div>

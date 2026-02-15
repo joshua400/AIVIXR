@@ -8,11 +8,10 @@ import About from '@/components/About'
 import Projects from '@/components/Projects'
 import DigitalMarketing from '@/components/DigitalMarketing'
 import Founder from '@/components/Founder'
-import Testimonials from '@/components/Testimonials'
-import Pricing from '@/components/Pricing'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import { MotionReveal } from '@/hooks/useAnimations'
 
 export default function Home() {
   const structuredData = {
@@ -53,6 +52,7 @@ export default function Home() {
       <main className="min-h-screen w-full bg-white">
         <Navigation />
         <Hero />
+
         <Services />
         <Infracore />
         <Process />
@@ -61,10 +61,9 @@ export default function Home() {
         <DigitalMarketing />
         <Projects />
         <Founder />
-        <Testimonials />
-        <Pricing />
         <FAQ />
         <Contact />
+
         <Footer />
       </main>
     </>

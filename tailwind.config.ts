@@ -28,6 +28,8 @@ const config: Config = {
         'fade-in': 'fade-in 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
         'scale-in-slow': 'scale-in 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
         'grain': 'grain 8s steps(10) infinite',
+        'marquee-left': 'marquee-left 40s linear infinite',
+        'marquee-right': 'marquee-right 40s linear infinite',
       },
       keyframes: {
         float: {
@@ -53,6 +55,14 @@ const config: Config = {
           '70%': { transform: 'translate(0%, 15%)' },
           '80%': { transform: 'translate(3%, 35%)' },
           '90%': { transform: 'translate(-10%, 10%)' },
+        },
+        'marquee-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        'marquee-right': {
+          '0%': { transform: 'translateX(-50%)' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
       backgroundImage: {

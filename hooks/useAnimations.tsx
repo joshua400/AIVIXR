@@ -1,32 +1,86 @@
 'use client'
 
-import { useEffect, useRef, useState, useCallback } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
+import { motion, useAnimation, useInView, Variants } from 'framer-motion'
 
-export function useScrollReveal(threshold = 0.15) {
-    const ref = useRef<HTMLDivElement>(null)
-    const [isRevealed, setIsRevealed] = useState(false)
-
-    useEffect(() => {
-        const el = ref.current
-        if (!el) return
-
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsRevealed(true)
-                    observer.unobserve(el)
-                }
-            },
-            { threshold }
-        )
-
-        observer.observe(el)
-        return () => observer.disconnect()
-    }, [threshold])
-
-    return { ref, isRevealed }
+interface MotionRevealProps {
+    children: React.ReactNode
+    className?: string
+    delay?: number
+    duration?: number
+    direction?: 'up' | 'down' | 'left' | 'right' | 'none'
+    distance?: number
+    once?: boolean
+    staggerChildren?: number
 }
 
+export function MotionReveal({
+    children,
+    className = '',
+    delay = 0,
+    duration = 0.8,
+    direction = 'up',
+    distance = 50,
+    once = true,
+    staggerChildren = 0
+}: MotionRevealProps) {
+    const controls = useAnimation()
+    const ref = useRef(null)
+    const inView = useInView(ref, {
+        once,
+        amount: 0.1 // Trigger when 10% of element is in view
+    })
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('visible')
+        } else if (!once) {
+            controls.start('hidden')
+        }
+    }, [controls, inView, once])
+
+    const getDirectionOffset = () => {
+        switch (direction) {
+            case 'up': return { y: distance }
+            case 'down': return { y: -distance }
+            case 'left': return { x: distance }
+            case 'right': return { x: -distance }
+            default: return {}
+        }
+    }
+
+    const variants: Variants = {
+        hidden: {
+            opacity: 0,
+            ...getDirectionOffset(),
+        },
+        visible: {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            transition: {
+                duration,
+                delay,
+                ease: [0.25, 1, 0.5, 1], // Custom easeOutExpo
+                staggerChildren,
+            }
+        }
+    }
+
+    return (
+        <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={variants}
+            className={className}
+        >
+            {children}
+        </motion.div>
+    )
+}
+
+// Keep legacy ScrollReveal for backward compatibility if needed, but we'll migrate to MotionReveal
 export function ScrollReveal({
     children,
     className = '',
@@ -38,16 +92,10 @@ export function ScrollReveal({
     delay?: number
     threshold?: number
 }) {
-    const { ref, isRevealed } = useScrollReveal(threshold)
-
     return (
-        <div
-            ref={ref}
-            className={`scroll-reveal ${isRevealed ? 'revealed' : ''} ${className}`}
-            style={{ transitionDelay: `${delay}s` }}
-        >
+        <MotionReveal delay={delay} className={className}>
             {children}
-        </div>
+        </MotionReveal>
     )
 }
 

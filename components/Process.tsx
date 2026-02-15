@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { MotionReveal } from '@/hooks/useAnimations'
 
 const phases = [
     {
@@ -32,28 +33,20 @@ export default function Process() {
     return (
         <section ref={container} id="process" className="relative py-32 bg-luxury-white overflow-hidden z-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-24"
-                >
+                <MotionReveal className="text-center mb-24">
                     <h2 className="font-display text-5xl md:text-7xl font-bold mb-6 text-charcoal tracking-tight">
                         From Vision to <span className="italic text-charcoal">Visible_</span>
                     </h2>
                     <p className="text-xl text-charcoal max-w-2xl mx-auto font-sans font-normal">
                         Our method combines strategic development, innovation, and engineering discipline.
                     </p>
-                </motion.div>
+                </MotionReveal>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {phases.map((phase, i) => (
-                        <motion.div
+                        <MotionReveal
                             key={i}
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.2, duration: 0.8 }}
+                            delay={i * 0.1}
                             className="relative group"
                         >
                             <div className="h-full bg-white text-charcoal p-8 rounded-2xl flex flex-col justify-between min-h-[300px] border border-charcoal/10 hover:border-accent-gold/50 hover:shadow-xl hover:shadow-charcoal/5 transition-all duration-500">
@@ -65,7 +58,7 @@ export default function Process() {
                                     {phase.description}
                                 </p>
                             </div>
-                        </motion.div>
+                        </MotionReveal>
                     ))}
                 </div>
             </div>

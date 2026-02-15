@@ -1,7 +1,7 @@
 'use client'
 
 import { Eye, Target } from 'lucide-react'
-import { ScrollReveal } from '@/hooks/useAnimations'
+import { MotionReveal } from '@/hooks/useAnimations'
 
 const whyChooseUs = [
   {
@@ -20,6 +20,10 @@ const whyChooseUs = [
     title: 'End-to-End Support',
     description: 'From initial ideation to long-term post-launch maintenance.',
   },
+  {
+    title: 'Fast Delivery',
+    description: 'Swift turnaround times without compromising on excellence.',
+  },
 ]
 
 export default function About() {
@@ -27,7 +31,7 @@ export default function About() {
     <section id="about" className="relative py-24 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <ScrollReveal>
+        <MotionReveal>
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 mb-6 border border-charcoal/10 px-4 py-1.5 rounded-full">
               <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/60 font-sans">The Company</span>
@@ -41,11 +45,11 @@ export default function About() {
               highly efficient, scalable, and user-centric methods.
             </p>
           </div>
-        </ScrollReveal>
+        </MotionReveal>
 
         {/* Vision & Mission Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-          <ScrollReveal delay={0.1}>
+          <MotionReveal delay={0.1}>
             <div className="glass-card p-12 h-full bg-sand/30 border-transparent hover:border-charcoal/5">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-charcoal/5">
@@ -59,8 +63,8 @@ export default function About() {
                 that drive innovation, foster growth, and create lasting impact.
               </p>
             </div>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
+          </MotionReveal>
+          <MotionReveal delay={0.2}>
             <div className="glass-card p-12 h-full bg-sand/30 border-transparent hover:border-charcoal/5">
               <div className="mb-6 flex items-center gap-4">
                 <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-charcoal/5">
@@ -74,11 +78,11 @@ export default function About() {
                 rigorous evaluation and refinement to ensure innovation and quality.
               </p>
             </div>
-          </ScrollReveal>
+          </MotionReveal>
         </div>
 
         {/* Why Choose Us Grid */}
-        <ScrollReveal delay={0.3}>
+        <MotionReveal delay={0.3}>
           <div className="text-center mb-16">
             <h3 className="text-2xl font-bold text-charcoal font-display">Why Choose Us</h3>
           </div>
@@ -91,7 +95,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </ScrollReveal>
+        </MotionReveal>
       </div>
     </section>
   )

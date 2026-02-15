@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 2.3 }}
             className="font-display text-[12vw] md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9] break-words"
           >
-            VISIONS<span className="text-accent-gold">.</span>
+            VISIONS
           </motion.h1>
         </div>
 
@@ -62,21 +62,18 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 2.6 }}
           className="text-charcoal/70 text-lg md:text-xl max-w-2xl mx-auto font-sans font-light leading-relaxed mb-12"
         >
-          AVIXR Technologies crafts cutting-edge web and mobile solutions, specializing in AI, custom software, and digital transformation.
+          Engineering the Future of Digital Innovation.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 2.8 }}
-          className="flex justify-center gap-6"
+          className="flex justify-center"
         >
           <a href="#services" className="group inline-flex items-center gap-4 px-8 py-4 bg-charcoal text-white text-xs font-bold uppercase tracking-widest hover:bg-accent-gold hover:text-charcoal transition-all duration-300 rounded-full">
             Explore Services
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </a>
-          <a href="#contact" className="inline-flex items-center px-8 py-4 border border-charcoal/20 text-charcoal text-xs font-bold uppercase tracking-widest hover:border-charcoal hover:bg-charcoal/5 transition-all duration-300 rounded-full">
-            Book a Call
           </a>
         </motion.div>
       </motion.div>

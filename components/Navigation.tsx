@@ -29,19 +29,24 @@ export default function Navigation() {
 
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group z-50">
-            {/* Using text logo for maximalism/minimalism until image is fixed or preferred */}
-            <span className="font-display font-bold text-xl tracking-tighter text-charcoal">AVIXR.</span>
+            <img src="/logo.png" alt="AVIXR" className="h-14 md:h-18 w-auto object-contain transition-transform group-hover:scale-105" />
           </a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            {['Process', 'Services', 'Projects'].map((item) => (
+            {[
+              { name: 'Home', href: '#home' },
+              { name: 'About Us', href: '#about' },
+              { name: 'Services', href: '#services' },
+              { name: 'Our Clients', href: '#clients' },
+              { name: 'Digital Marketing', href: '#digital-marketing' }
+            ].map((item) => (
               <a
-                key={item}
-                href={`/#${item.toLowerCase()}`}
+                key={item.name}
+                href={item.href}
                 className="text-sm font-medium text-charcoal/60 hover:text-charcoal transition-colors tracking-wide font-sans"
               >
-                {item}
+                {item.name}
               </a>
             ))}
           </div>
@@ -73,14 +78,20 @@ export default function Navigation() {
                 exit={{ opacity: 0, y: -20, scale: 0.95 }}
                 className="absolute top-full left-0 right-0 mt-4 mx-4 p-6 bg-white rounded-3xl shadow-xl border border-charcoal/5 md:hidden flex flex-col gap-4 items-center justify-center text-center"
               >
-                {['Process', 'Services', 'Projects', 'Pricing', 'Contact'].map((item) => (
+                {[
+                  { name: 'Home', href: '#home' },
+                  { name: 'About Us', href: '#about' },
+                  { name: 'Services', href: '#services' },
+                  { name: 'Our Clients', href: '#clients' },
+                  { name: 'Digital Marketing', href: '#digital-marketing' }
+                ].map((item) => (
                   <a
-                    key={item}
-                    href={`/#${item.toLowerCase()}`}
+                    key={item.name}
+                    href={item.href}
                     onClick={() => setIsOpen(false)}
                     className="text-lg font-medium text-charcoal/80 hover:text-charcoal font-display"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 ))}
               </motion.div>
