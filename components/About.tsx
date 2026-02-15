@@ -24,22 +24,18 @@ const whyChooseUs = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 overflow-hidden bg-calisto-gray/30">
-      {/* Background accents */}
-      <div className="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full bg-calisto-bright-blue/5 blur-[120px]" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-calisto-blue/5 blur-[120px]" />
-
+    <section id="about" className="relative py-24 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <ScrollReveal>
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 mb-4 bg-white border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
-              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">The Company</span>
+            <div className="inline-flex items-center gap-2 mb-6 border border-charcoal/10 px-4 py-1.5 rounded-full">
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/60 font-sans">The Company</span>
             </div>
-            <h2 className="font-tight text-4xl md:text-6xl font-bold mb-6 text-calisto-dark tracking-tight">
-              About <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">AVIXR</span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-charcoal tracking-tight">
+              About <span className="italic text-charcoal/80">AVIXR</span>
             </h2>
-            <p className="text-calisto-dark/50 text-lg max-w-3xl mx-auto font-manrope font-medium leading-relaxed">
+            <p className="text-charcoal/60 text-lg max-w-3xl mx-auto font-sans font-light leading-relaxed">
               AVIXR Technologies Pvt Ltd is a research-driven software company founded by KV Avinash Sarma.
               We excel in transforming visionary ideas into top-tier mobile and web solutions using
               highly efficient, scalable, and user-centric methods.
@@ -48,16 +44,16 @@ export default function About() {
         </ScrollReveal>
 
         {/* Vision & Mission Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           <ScrollReveal delay={0.1}>
-            <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
+            <div className="glass-card p-12 h-full bg-sand/30 border-transparent hover:border-charcoal/5">
               <div className="mb-6 flex items-center gap-4">
-                <div className="w-12 h-12 bg-calisto-blue/10 rounded-xl flex items-center justify-center">
-                  <Eye className="h-6 w-6 text-calisto-blue" />
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-charcoal/5">
+                  <Eye className="h-5 w-5 text-charcoal" />
                 </div>
-                <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Vision</h3>
+                <h3 className="text-xl font-bold text-charcoal font-display">Our Vision</h3>
               </div>
-              <p className="text-calisto-dark/50 leading-relaxed font-manrope font-medium">
+              <p className="text-charcoal/60 leading-relaxed font-sans text-sm">
                 We envision a world where technology empowers businesses to achieve their full potential.
                 Our goal is to lead the industry by delivering groundbreaking digital solutions
                 that drive innovation, foster growth, and create lasting impact.
@@ -65,14 +61,14 @@ export default function About() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
-            <div className="glass-card p-10 bg-white border-black/5 shadow-md h-full">
+            <div className="glass-card p-12 h-full bg-sand/30 border-transparent hover:border-charcoal/5">
               <div className="mb-6 flex items-center gap-4">
-                <div className="w-12 h-12 bg-calisto-bright-blue/10 rounded-xl flex items-center justify-center">
-                  <Target className="h-6 w-6 text-calisto-bright-blue" />
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-charcoal/5">
+                  <Target className="h-5 w-5 text-charcoal" />
                 </div>
-                <h3 className="text-2xl font-bold text-calisto-dark font-tight">Our Mission</h3>
+                <h3 className="text-xl font-bold text-charcoal font-display">Our Mission</h3>
               </div>
-              <p className="text-calisto-dark/50 leading-relaxed font-manrope font-medium">
+              <p className="text-charcoal/60 leading-relaxed font-sans text-sm">
                 Transform Ideas into Reality — We transform innovative concepts into functional,
                 high-quality digital solutions that create meaningful impact. Each project undergoes
                 rigorous evaluation and refinement to ensure innovation and quality.
@@ -83,15 +79,15 @@ export default function About() {
 
         {/* Why Choose Us Grid */}
         <ScrollReveal delay={0.3}>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-calisto-dark font-tight">Why Choose Us</h3>
+          <div className="text-center mb-16">
+            <h3 className="text-2xl font-bold text-charcoal font-display">Why Choose Us</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyChooseUs.map((item, index) => (
-              <div key={index} className="glass-card p-8 bg-white/50 border-black/[0.03] hover:border-calisto-blue/20 transition-all duration-300">
-                <div className="text-calisto-blue mb-4 font-bold">0{index + 1}</div>
-                <h4 className="text-lg font-bold text-calisto-dark mb-2 font-tight">{item.title}</h4>
-                <p className="text-calisto-dark/50 text-sm font-manrope font-medium">{item.description}</p>
+              <div key={index} className="p-8 border-l border-charcoal/10 hover:border-accent-gold transition-colors duration-500">
+                <div className="text-accent-gold mb-6 font-display font-bold text-xl">0{index + 1}</div>
+                <h4 className="text-base font-bold text-charcoal mb-3 font-sans tracking-wide">{item.title}</h4>
+                <p className="text-charcoal/50 text-sm font-sans leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

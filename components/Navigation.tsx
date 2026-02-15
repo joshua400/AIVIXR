@@ -1,80 +1,92 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
-      <div className="mx-auto flex justify-center px-4 sm:px-6 lg:px-8 py-4">
-        <div className="glass rounded-full px-8 py-2.5 flex items-center gap-12 border-black/5 shadow-sm">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'pt-4' : 'pt-6'}`}>
+      <div className="mx-auto flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className={`
+          relative flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500
+          ${scrolled
+            ? 'glass shadow-sm bg-white/80 w-full max-w-5xl'
+            : 'w-full max-w-7xl bg-transparent'
+          }
+        `}>
+
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
-            <img src="/avixrlogo.png" alt="AVIXR Logo" className="h-7 w-auto" />
+          <a href="/" className="flex items-center gap-2 group z-50">
+            {/* Using text logo for maximalism/minimalism until image is fixed or preferred */}
+            <span className="font-display font-bold text-xl tracking-tighter text-charcoal">AVIXR.</span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-2">
-            <a href="/#process" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
-              Process
-            </a>
-            <a href="/#services" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
-              Services
-            </a>
-            <a href="/#projects" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
-              Projects
-            </a>
-            <a href="/#pricing" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
-              Pricing
-            </a>
-            <a href="/#contact" className="text-calisto-dark/80 hover:text-calisto-dark transition-colors text-[12px] font-bold font-manrope uppercase tracking-widest px-5 py-2.5 rounded-full hover:bg-black/[0.03] border border-transparent hover:border-black/[0.05]">
-              Contact
-            </a>
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            {['Process', 'Services', 'Projects'].map((item) => (
+              <a
+                key={item}
+                href={`/#${item.toLowerCase()}`}
+                className="text-sm font-medium text-charcoal/60 hover:text-charcoal transition-colors tracking-wide font-sans"
+              >
+                {item}
+              </a>
+            ))}
           </div>
 
-          {/* CTA Section */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* CTA & Mobile Toggle */}
+          <div className="flex items-center gap-4 z-50">
             <a
               href="/#contact"
-              className="btn-primary text-sm py-2.5 px-6 shadow-lg shadow-calisto-bright-blue/10"
+              className="hidden md:flex bg-charcoal text-white text-xs font-bold px-6 py-2.5 rounded-full hover:bg-accent-gold transition-colors duration-300"
             >
-              Book a Call
+              Let's Talk
             </a>
+
+            <button
+              className="md:hidden p-2 text-charcoal/80 hover:text-charcoal transition-colors"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-calisto-dark/60 hover:text-calisto-dark transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu */}
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                className="absolute top-full left-0 right-0 mt-4 mx-4 p-6 bg-white rounded-3xl shadow-xl border border-charcoal/5 md:hidden flex flex-col gap-4 items-center justify-center text-center"
+              >
+                {['Process', 'Services', 'Projects', 'Pricing', 'Contact'].map((item) => (
+                  <a
+                    key={item}
+                    href={`/#${item.toLowerCase()}`}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg font-medium text-charcoal/80 hover:text-charcoal font-display"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-
-        {/* Mobile Nav */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t border-black/5 overflow-hidden"
-            >
-              <div className="flex flex-col gap-4 p-6">
-                <a href="/#process" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Process</a>
-                <a href="/#services" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Services</a>
-                <a href="/#projects" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Projects</a>
-                <a href="/#pricing" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Pricing</a>
-                <a href="/#contact" onClick={() => setIsOpen(false)} className="text-[15px] font-bold text-calisto-dark font-tight">Contact</a>
-                <a href="/#contact" onClick={() => setIsOpen(false)} className="btn-primary w-full py-4 text-center mt-4">Book a Call</a>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </nav>
   )

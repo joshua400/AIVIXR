@@ -28,7 +28,6 @@ const plans = [
             "Up to 8 Integrations",
             "Real-Time Insights",
             "Priority Support",
-            "Secure & Reliable",
             "Advanced Analytics",
             "Pause or cancel anytime",
         ],
@@ -44,46 +43,26 @@ const plans = [
             "Custom API Integration",
             "Dedicated Support",
             "Real-Time Insights",
-            "Secure & Reliable",
             "Onboarding & Training",
             "Custom Terms",
         ],
-        cta: "Get started",
+        cta: "Contact Sales",
         popular: false,
     },
 ];
 
 export default function Pricing() {
     return (
-        <section id="pricing" className="py-24 bg-background">
+        <section id="pricing" className="py-32 bg-sand/20">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 mb-6"
-                    >
-                        <span className="text-sm font-medium text-primary">Pricing</span>
-                    </motion.div>
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl font-bold bg-gradient-to-b from-foreground to-foreground/70 bg-clip-text text-transparent mb-4"
-                    >
-                        Flexible Plans for Every Team
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-lg text-muted-foreground max-w-2xl mx-auto"
-                    >
+                <div className="text-center mb-24">
+                    <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">Pricing</span>
+                    <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
+                        Flexible <span className="italic text-charcoal/70">Plans</span>
+                    </h2>
+                    <p className="text-lg text-charcoal/60 max-w-2xl mx-auto font-sans font-light">
                         Choose the right plan to supercharge your workflow with AI-powered automation.
-                    </motion.p>
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -94,44 +73,44 @@ export default function Pricing() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`relative flex flex-col p-8 rounded-2xl border ${plan.popular
-                                ? "border-primary bg-primary/[0.02] shadow-xl shadow-primary/5"
-                                : "border-border bg-card"
+                            className={`relative flex flex-col p-10 transition-all duration-500 ${plan.popular
+                                ? "bg-white shadow-2xl shadow-charcoal/5 scale-105 z-10 border border-charcoal/5"
+                                : "bg-transparent border border-charcoal/10 hover:bg-white/50"
                                 }`}
                         >
                             {plan.popular && (
-                                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
-                                    MOST POPULAR
+                                <div className="absolute top-0 right-0 bg-charcoal text-white text-[10px] font-bold tracking-widest uppercase px-4 py-2">
+                                    Popular
                                 </div>
                             )}
                             <div className="mb-8">
-                                <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
+                                <h3 className="text-lg font-bold mb-4 font-display text-charcoal">{plan.name}</h3>
                                 <div className="flex items-baseline gap-1 mb-4">
-                                    <span className="text-4xl font-bold">{plan.price}</span>
-                                    <span className="text-muted-foreground">/month</span>
+                                    <span className="text-4xl font-bold text-charcoal tracking-tight">{plan.price}</span>
+                                    <span className="text-charcoal/40 text-sm">/month</span>
                                 </div>
-                                <p className="text-sm text-muted-foreground">{plan.description}</p>
+                                <p className="text-sm text-charcoal/60 font-sans leading-relaxed">{plan.description}</p>
                             </div>
 
-                            <div className="flex-grow space-y-4 mb-8">
-                                <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                                    What's included:
+                            <div className="flex-grow space-y-4 mb-10">
+                                <p className="text-[10px] font-bold uppercase tracking-wider text-charcoal/40 font-sans">
+                                    Includes:
                                 </p>
                                 {plan.features.map((feature) => (
                                     <div key={feature} className="flex items-start gap-3 text-sm">
-                                        <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                            <Check className="w-3 h-3 text-primary" />
+                                        <div className="mt-1 w-4 h-4 rounded-full bg-accent-gold/20 flex items-center justify-center flex-shrink-0">
+                                            <Check className="w-2.5 h-2.5 text-charcoal" />
                                         </div>
-                                        <span>{feature}</span>
+                                        <span className="text-charcoal/80 font-sans">{feature}</span>
                                     </div>
                                 ))}
                             </div>
 
                             <a
                                 href="#contact"
-                                className={`w-full py-4 rounded-xl font-bold transition-all duration-300 flex items-center justify-center gap-2 ${plan.popular
-                                        ? 'bg-calisto-bright-blue text-white shadow-lg shadow-calisto-bright-blue/25 hover:bg-calisto-blue'
-                                        : 'bg-white text-calisto-dark border border-black/5 hover:border-calisto-bright-blue/30'
+                                className={`w-full py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 flex items-center justify-center ${plan.popular
+                                    ? 'bg-charcoal text-white hover:bg-accent-gold hover:text-charcoal'
+                                    : 'bg-transparent text-charcoal border border-charcoal/20 hover:border-charcoal hover:bg-charcoal hover:text-white'
                                     }`}
                             >
                                 {plan.cta}

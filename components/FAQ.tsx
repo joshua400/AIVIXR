@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ScrollReveal } from '@/hooks/useAnimations'
+import { Plus, Minus } from 'lucide-react'
 
 const faqs = [
     {
@@ -30,41 +31,38 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0)
 
     return (
-        <section className="relative py-32 overflow-hidden bg-calisto-gray/30">
-            <div className="absolute top-1/2 right-0 w-[400px] h-[400px] rounded-full bg-calisto-bright-blue/5 blur-[120px]" />
-
+        <section className="relative py-32 overflow-hidden bg-white">
             <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center mb-20">
-                        <div className="inline-flex items-center gap-2 mb-4 bg-white border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
-                            <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Questions & Answers</span>
-                        </div>
-                        <h2 className="font-tight text-4xl md:text-5xl font-bold mb-6 text-calisto-dark tracking-tight">
-                            Common <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">FAQs</span>
+                        <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">FAQ</span>
+                        <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
+                            Common <span className="italic text-charcoal/70">Questions</span>
                         </h2>
-                        <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
-                            Get answers to your questions and learn about our innovative solutions
-                        </p>
                     </div>
                 </ScrollReveal>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => (
                         <ScrollReveal key={index} delay={index * 0.05}>
-                            <div className={`faq-item bg-white border-black/[0.03] transition-all duration-300 ${openIndex === index ? 'shadow-lg border-calisto-bright-blue/10' : 'shadow-sm'}`}>
+                            <div className={`group border-b border-charcoal/10 transition-all duration-300 ${openIndex === index ? 'pb-8' : ''}`}>
                                 <button
                                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                    className="w-full flex items-center justify-between p-7 text-left"
+                                    className="w-full flex items-center justify-between py-6 text-left"
                                 >
-                                    <span className="text-calisto-dark font-bold text-lg font-tight tracking-tight">{faq.question}</span>
-                                    <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'bg-calisto-dark text-white rotate-180' : 'bg-calisto-gray text-calisto-dark'}`}>
-                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                                        </svg>
+                                    <span className={`font-display text-lg font-bold transition-colors ${openIndex === index ? 'text-charcoal' : 'text-charcoal/60 group-hover:text-charcoal'}`}>
+                                        {faq.question}
+                                    </span>
+                                    <div className="ml-4 flex-shrink-0">
+                                        {openIndex === index ? (
+                                            <Minus className="w-4 h-4 text-charcoal" />
+                                        ) : (
+                                            <Plus className="w-4 h-4 text-charcoal/40 group-hover:text-charcoal transition-colors" />
+                                        )}
                                     </div>
                                 </button>
-                                <div className={`faq-content ${openIndex === index ? 'open' : ''}`}>
-                                    <p className="px-7 pb-7 text-calisto-dark/50 border-t border-black/[0.03] pt-5 leading-relaxed font-manrope font-medium">
+                                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                    <p className="text-charcoal/60 leading-relaxed font-sans text-sm pr-12">
                                         {faq.answer}
                                     </p>
                                 </div>

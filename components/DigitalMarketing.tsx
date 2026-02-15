@@ -34,38 +34,34 @@ const services = [
 const features = [
   {
     title: 'Effortless Integration',
-    description: 'Your data is synced in real-time across devices, ensuring you stay connected and informed.',
+    description: 'Your data is synced in real-time across devices, ensuring you stay connected.',
     icon: '🔗',
   },
   {
     title: 'Secure & Scalable',
-    description: 'Enterprise-grade encryption protects your information, while flexible tools adapt to your needs.',
+    description: 'Enterprise-grade encryption protects your information, while flexible tools adapt.',
     icon: '🛡️',
   },
   {
     title: 'Actionable Insights',
-    description: 'Leverage AI-powered analytics to identify trends, predict outcomes, and optimize your workflow.',
+    description: 'Leverage AI-powered analytics to identify trends, predict outcomes, and optimize.',
     icon: '📈',
   },
 ]
 
 export default function DigitalMarketing() {
   return (
-    <section id="digital-marketing" className="relative py-24 overflow-hidden bg-white">
-      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] rounded-full bg-calisto-blue/5 blur-[120px]" />
-
+    <section id="digital-marketing" className="relative py-32 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Digital Marketing Services */}
         <ScrollReveal>
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 mb-4 bg-calisto-gray border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
-              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Digital Marketing</span>
-            </div>
-            <h2 className="font-tight text-4xl md:text-6xl font-bold mb-6 text-calisto-dark tracking-tight">
-              Boost your <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">brand</span>
+            <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-charcoal/40 font-sans block mb-6">Digital Growth</span>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-charcoal tracking-tight">
+              Boost your <span className="italic text-charcoal/70">brand</span>
             </h2>
-            <p className="text-calisto-dark/50 text-lg max-w-3xl mx-auto font-manrope font-medium">
-              In today&apos;s digital landscape, a strong online presence is crucial. Our comprehensive solutions help you reach your audience and drive measurable results.
+            <p className="text-charcoal/60 text-lg max-w-3xl mx-auto font-sans font-light">
+              In today&apos;s digital landscape, a strong online presence is crucial. Our comprehensive solutions help you reach your audience.
             </p>
           </div>
         </ScrollReveal>
@@ -73,14 +69,14 @@ export default function DigitalMarketing() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
           {services.map((service, index) => (
             <ScrollReveal key={index} delay={index * 0.05}>
-              <div className="glass-card p-10 h-full group bg-calisto-gray/30 border-black/[0.03] hover:bg-white transition-all duration-300 shadow-none hover:shadow-xl hover:shadow-calisto-bright-blue/5">
-                <div className="mb-6 w-14 h-14 rounded-2xl bg-white border border-black/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <img src={service.icon} alt={service.title} className="w-7 h-7 object-contain" />
+              <div className="group p-10 h-full bg-sand/10 border border-transparent hover:border-charcoal/10 transition-all duration-500">
+                <div className="mb-8 opacity-60 group-hover:opacity-100 transition-opacity">
+                  <img src={service.icon} alt={service.title} className="w-8 h-8 object-contain" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-calisto-dark group-hover:text-calisto-bright-blue transition-colors font-tight">
+                <h3 className="text-lg font-bold mb-4 text-charcoal font-display">
                   {service.title}
                 </h3>
-                <p className="text-calisto-dark/50 leading-relaxed text-[15px] font-manrope font-medium">{service.description}</p>
+                <p className="text-charcoal/60 leading-relaxed text-sm font-sans">{service.description}</p>
               </div>
             </ScrollReveal>
           ))}
@@ -89,13 +85,10 @@ export default function DigitalMarketing() {
         {/* AI-Driven Efficiency Section */}
         <ScrollReveal>
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 mb-4 bg-calisto-gray border border-black/5 px-4 py-1.5 rounded-full shadow-sm">
-              <span className="text-[11px] font-bold tracking-widest uppercase text-calisto-dark/50 font-manrope">Efficiency</span>
-            </div>
-            <h2 className="font-tight text-4xl md:text-5xl font-bold mb-6 text-calisto-dark tracking-tight">
-              Never miss an <span className="bg-gradient-to-r from-calisto-blue to-calisto-bright-blue bg-clip-text text-transparent">opportunity</span>
+            <h2 className="font-display text-3xl font-bold mb-6 text-charcoal tracking-tight">
+              Driven by <span className="italic text-charcoal/70">Intelligence</span>
             </h2>
-            <p className="text-calisto-dark/50 text-lg max-w-2xl mx-auto font-manrope font-medium">
+            <p className="text-charcoal/60 text-lg max-w-2xl mx-auto font-sans font-light">
               Capture leads, analyze trends, and centralize critical insights to optimize your workflow.
             </p>
           </div>
@@ -104,38 +97,32 @@ export default function DigitalMarketing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
           {features.map((feature, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <div className="glass-card p-10 h-full group bg-white border-black/5 shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="text-4xl mb-6">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-3 text-calisto-dark font-tight">{feature.title}</h3>
-                <p className="text-calisto-dark/50 leading-relaxed text-[15px] font-manrope font-medium">{feature.description}</p>
+              <div className="p-10 h-full border-l border-charcoal/10 hover:border-accent-gold transition-colors duration-500">
+                <div className="text-4xl mb-6 grayscale">{feature.icon}</div>
+                <h3 className="text-xl font-bold mb-3 text-charcoal font-display">{feature.title}</h3>
+                <p className="text-charcoal/60 leading-relaxed text-sm font-sans">{feature.description}</p>
               </div>
             </ScrollReveal>
           ))}
         </div>
 
-        {/* Platforms We Leverage */}
-        <div className="mt-20">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <h3 className="text-3xl font-bold text-calisto-dark font-tight">Platforms We Leverage</h3>
-            </div>
-          </ScrollReveal>
-
+        {/* Platforms */}
+        <div className="mt-20 border-t border-charcoal/5 pt-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
               {
                 name: 'Google Ads',
-                icon: <Globe className="w-12 h-12 text-calisto-blue" />,
+                icon: <Globe className="w-8 h-8 text-charcoal" />,
                 url: 'https://share.google/DtNk1wkdKMF0j1ZrO'
               },
               {
                 name: 'LinkedIn',
-                icon: <Linkedin className="w-12 h-12 text-calisto-blue" />,
+                icon: <Linkedin className="w-8 h-8 text-charcoal" />,
                 url: 'https://www.linkedin.com/company/avixr-private-limited/'
               },
               {
                 name: 'Instagram',
-                icon: <Instagram className="w-12 h-12 text-calisto-blue" />,
+                icon: <Instagram className="w-8 h-8 text-charcoal" />,
                 url: 'https://www.instagram.com/avixr_pvt_ltd/'
               },
             ].map((platform, index) => (
@@ -144,26 +131,17 @@ export default function DigitalMarketing() {
                   href={platform.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="glass-card p-8 flex flex-col items-center justify-center bg-white border-black/5 hover:border-calisto-blue/20 transition-all duration-300 group"
+                  className="flex flex-col items-center justify-center p-8 group hover:bg-sand/10 transition-colors rounded-sm"
                 >
-                  <div className="w-16 h-16 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="mb-4 opacity-50 group-hover:opacity-100 transition-opacity">
                     {platform.icon}
                   </div>
-                  <h4 className="font-bold text-calisto-dark">{platform.name}</h4>
+                  <h4 className="text-sm font-bold text-charcoal uppercase tracking-widest">{platform.name}</h4>
                 </a>
               </ScrollReveal>
             ))}
           </div>
         </div>
-
-        {/* Tags row */}
-        <ScrollReveal delay={0.3}>
-          <div className="mt-20 flex flex-wrap items-center justify-center gap-4">
-            {['Smart Analytics', 'Real-Time Collaboration', 'Task Prioritization'].map((tag, i) => (
-              <span key={i} className="inline-flex items-center gap-2 bg-calisto-gray border border-black/5 px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest text-calisto-dark/40 font-manrope">{tag}</span>
-            ))}
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   )
