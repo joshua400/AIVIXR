@@ -22,13 +22,12 @@ export default function Infracore() {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <span className="text-accent-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">The Core System</span>
+                    <span className="text-accent-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">Our Proprietary Engine</span>
                     <h2 className="font-display text-5xl md:text-8xl font-bold mb-8 tracking-tighter text-charcoal">
-                        The InfraCore<span className="text-accent-gold">®</span>
+                        AVIXR Intelligence<span className="text-accent-gold">.</span>
                     </h2>
-                    <p className="text-xl md:text-2xl text-charcoal/70 max-w-3xl mx-auto font-light leading-relaxed mb-16">
-                        Our decentralized AI operating system purpose-built for digital development.
-                        7 layers of intelligence ensuring every project outperforms.
+                    <p className="text-xl md:text-2xl text-charcoal max-w-3xl mx-auto font-normal leading-relaxed mb-16">
+                        The core methodology behind every solution. We integrate advanced AI with robust engineering principles to ensure your digital infrastructure is scalable, secure, and future-proof.
                     </p>
                 </motion.div>
 
@@ -40,7 +39,7 @@ export default function Infracore() {
                             initial={{ width: "20%", opacity: 0 }}
                             whileInView={{ width: `${100 - (i * 10)}%`, opacity: 1 }}
                             transition={{ delay: i * 0.1, duration: 1 }}
-                            className="h-[1px] bg-charcoal/20"
+                            className="h-[2px] bg-charcoal"
                             style={{ maxWidth: '800px' }}
                         />
                     ))}

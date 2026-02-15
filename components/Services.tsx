@@ -54,15 +54,15 @@ function ServiceCard({ service, index, range, targetScale, progress }: any) {
         <div className="flex flex-col justify-between h-full relative z-10">
           <div>
             <div className="flex items-center justify-between mb-8">
-              <span className="text-sm font-bold tracking-widest uppercase text-charcoal/40 font-sans">0{index + 1}</span>
-              <img src={service.icon} alt={service.title} className="w-12 h-12 object-contain opacity-80" />
+              <span className="text-sm font-bold tracking-widest uppercase text-charcoal font-sans">0{index + 1}</span>
+              <img src={service.icon} alt={service.title} className="w-12 h-12 object-contain" />
             </div>
-            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-charcoal tracking-tight leading-none mb-8 break-words">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-black tracking-tight leading-none mb-8 break-words">
               {service.title}
             </h2>
           </div>
 
-          <p className="text-lg md:text-2xl text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl">
+          <p className="text-lg md:text-2xl text-charcoal font-normal leading-relaxed font-sans max-w-2xl">
             {service.description}
           </p>
         </div>

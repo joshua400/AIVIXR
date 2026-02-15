@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <section ref={containerRef} id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-luxury-white">
       {/* Background Video with Parallax */}
-      <motion.div style={{ y, scale }} className="absolute inset-0 z-0">
+      <motion.div style={{ y, scale }} className="absolute inset-0 z-0 will-change-transform">
         <video
           autoPlay
           loop

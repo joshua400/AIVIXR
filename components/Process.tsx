@@ -39,9 +39,9 @@ export default function Process() {
                     className="text-center mb-24"
                 >
                     <h2 className="font-display text-5xl md:text-7xl font-bold mb-6 text-charcoal tracking-tight">
-                        From Vision to <span className="italic text-charcoal/70">Visible_</span>
+                        From Vision to <span className="italic text-charcoal">Visible_</span>
                     </h2>
-                    <p className="text-xl text-charcoal/60 max-w-2xl mx-auto font-sans font-light">
+                    <p className="text-xl text-charcoal max-w-2xl mx-auto font-sans font-normal">
                         Our method combines strategic development, innovation, and engineering discipline.
                     </p>
                 </motion.div>
