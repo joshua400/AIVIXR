@@ -33,13 +33,13 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <motion.div style={{ opacity }} className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <motion.div style={{ opacity }} className="relative z-10 text-center px-4 max-w-[90vw] mx-auto">
         <div className="overflow-hidden mb-2">
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 2.2 }} // Delay after preloader
-            className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9]"
+            className="font-display text-[12vw] md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9] break-words"
           >
             TRANSFORMING
           </motion.h1>
@@ -50,7 +50,7 @@ export default function Hero() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 2.3 }}
-            className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9]"
+            className="font-display text-[12vw] md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9] break-words"
           >
             VISIONS<span className="text-accent-gold">.</span>
           </motion.h1>

@@ -8,25 +8,25 @@ const services = [
     icon: '/software.png',
     title: 'Web & Mobile Development',
     description: 'Building the digital foundation for your enterprise with cutting-edge web technologies and cross-platform mobile applications.',
-    color: '#f5f5f5' // Sand
+    color: '#FFFFFF' // White
   },
   {
     icon: '/ai.png',
     title: 'AI & Automation',
     description: 'Leveraging next-generation artificial intelligence and machine learning to streamline operations and create predictive systems.',
-    color: '#e5e5e5' // Darker Sand
+    color: '#FAFAFA' // Very Light Grey
   },
   {
     icon: '/digi.png',
     title: 'Digital Transformation',
     description: 'Strategic consulting and implementation of digital workflows to modernize legacy systems and improved business agility.',
-    color: '#d4d4d4' // Gray
+    color: '#F5F5F5' // Light Grey
   },
   {
     icon: '/technical.png',
     title: 'Technical Consulting',
     description: 'Expert guidance on architecture, tech stack selection, and scalability planning for high-growth enterprises.',
-    color: '#c4c4c4' // Darker Gray
+    color: '#F0F0F0' // Soft Grey
   },
 ]
 
@@ -42,27 +42,27 @@ function ServiceCard({ service, index, range, targetScale, progress }: any) {
   return (
     <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
       <motion.div
-        style={{ scale, top: `calc(-5vh + ${index * 25}px)` }}
-        className="relative flex flex-col w-[90vw] md:w-[70vw] max-w-4xl h-[60vh] rounded-3xl p-12 md:p-16 border border-charcoal/10 shadow-2xl origin-top"
+        style={{ scale, top: `calc(5vh + ${index * 25}px)` }}
+        className="relative flex flex-col w-[90vw] md:w-[70vw] max-w-4xl h-[60vh] rounded-3xl p-8 md:p-16 border border-charcoal/5 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] origin-top bg-white"
       >
         {/* Background Backdrop */}
         <div
-          className="absolute inset-0 rounded-3xl -z-10 bg-white/80 backdrop-blur-xl transition-colors duration-500"
+          className="absolute inset-0 rounded-3xl -z-10 transition-colors duration-500"
           style={{ backgroundColor: service.color }}
         />
 
-        <div className="flex flex-col justify-between h-full">
+        <div className="flex flex-col justify-between h-full relative z-10">
           <div>
             <div className="flex items-center justify-between mb-8">
               <span className="text-sm font-bold tracking-widest uppercase text-charcoal/40 font-sans">0{index + 1}</span>
               <img src={service.icon} alt={service.title} className="w-12 h-12 object-contain opacity-80" />
             </div>
-            <h2 className="font-display text-4xl md:text-6xl font-bold text-charcoal tracking-tight leading-none mb-8">
+            <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-charcoal tracking-tight leading-none mb-8 break-words">
               {service.title}
             </h2>
           </div>
 
-          <p className="text-xl md:text-2xl text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl">
+          <p className="text-lg md:text-2xl text-charcoal/70 leading-relaxed font-sans font-light max-w-2xl">
             {service.description}
           </p>
         </div>
