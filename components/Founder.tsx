@@ -24,9 +24,9 @@ export default function Founder() {
                   <div className="absolute inset-0 rounded-full overflow-hidden border-2 border-accent-gold/20 p-2 shadow-inner">
                     <div className="relative w-full h-full rounded-full overflow-hidden bg-white">
                       <img
-                        src="/founder_avin.png"
+                        src="/founder_new.jpeg"
                         alt="KV Avinash Sarma - Founder"
-                        className="w-full h-full object-cover object-[center_25%] transition-transform duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                       />
                       {/* Merger Gradient Overlay - Blending the portrait into the theme */}
                       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 via-transparent to-white/10 opacity-60 mix-blend-multiply" />

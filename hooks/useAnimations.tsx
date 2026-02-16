@@ -18,7 +18,7 @@ export function MotionReveal({
     children,
     className = '',
     delay = 0,
-    duration = 0.8,
+    duration = 0.5,
     direction = 'up',
     distance = 50,
     once = true,

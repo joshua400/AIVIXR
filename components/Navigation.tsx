@@ -28,12 +28,19 @@ export default function Navigation() {
         `}>
 
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group z-50">
-            <img src="/logo.png" alt="AVIXR" className="h-14 md:h-18 w-auto object-contain transition-transform group-hover:scale-105" />
+          <a href="/" className="flex items-center gap-3 group z-50 shrink-0">
+            <div className="flex flex-col h-10 md:h-12 justify-center">
+              <span className="text-xl md:text-2xl font-display font-black text-charcoal tracking-tighter leading-none">
+                AVIXR <span className="text-charcoal/60 font-medium">Technologies</span>
+              </span>
+              <span className="text-[10px] md:text-[11px] font-sans font-black uppercase tracking-[0.4em] text-accent-gold mt-1">
+                Pvt Ltd
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {[
               { name: 'Home', href: '#home' },
               { name: 'About Us', href: '#about' },
@@ -44,7 +51,7 @@ export default function Navigation() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-charcoal/60 hover:text-charcoal transition-colors tracking-wide font-sans"
+                className="text-[13px] font-semibold text-charcoal/60 hover:text-charcoal transition-colors tracking-wide font-sans whitespace-nowrap"
               >
                 {item.name}
               </a>

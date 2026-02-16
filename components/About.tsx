@@ -39,11 +39,25 @@ export default function About() {
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-8 text-charcoal tracking-tight">
               About <span className="italic text-charcoal/80">AVIXR</span>
             </h2>
-            <p className="text-charcoal/60 text-lg max-w-3xl mx-auto font-sans font-light leading-relaxed">
-              AVIXR Technologies Pvt Ltd is a research-driven software company founded by KV Avinash Sarma.
-              We excel in transforming visionary ideas into top-tier mobile and web solutions using
-              highly efficient, scalable, and user-centric methods.
-            </p>
+            <div className="text-charcoal/60 text-lg max-w-3xl mx-auto font-sans font-light leading-relaxed space-y-4">
+              <p>
+                <span className="font-bold text-charcoal">AVIXR Technologies Pvt Ltd</span> is a research-driven SaaS and deep-tech company focused on building next-generation brain intelligence systems powered by advanced AI, simulation models, and quantum-inspired algorithms.
+              </p>
+              <p>
+                The company develops scalable software platforms that transform complex decision-making into data-driven foresight.
+              </p>
+              <p>
+                AVIXR specializes in secure intelligence SaaS solutions. Its core innovation is <span className="font-bold text-charcoal">Q-Simutron</span>, a quantum-inspired Business Simulation Intelligence platform designed to:
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-base">
+                <li>Simulate future outcomes</li>
+                <li>Predict risks</li>
+                <li>Guide smarter decisions</li>
+              </ul>
+              <div className="pt-2 text-sm uppercase tracking-widest font-bold text-charcoal/40">
+                For: Startups • Enterprises • Investors • Data Scientists • Governments
+              </div>
+            </div>
           </div>
         </MotionReveal>
 
@@ -58,9 +72,8 @@ export default function About() {
                 <h3 className="text-xl font-bold text-charcoal font-display">Our Vision</h3>
               </div>
               <p className="text-charcoal/60 leading-relaxed font-sans text-sm">
-                We envision a world where technology empowers businesses to achieve their full potential.
-                Our goal is to lead the industry by delivering groundbreaking digital solutions
-                that drive innovation, foster growth, and create lasting impact.
+                To make quantum intelligence universally accessible — enabling users to access quantum technology directly through their mobile phones and laptops.
+                Avixr Intelligence brings advanced Q-bit algorithms to every user, democratizing access to quantum-powered intelligence.
               </p>
             </div>
           </MotionReveal>
@@ -73,9 +86,7 @@ export default function About() {
                 <h3 className="text-xl font-bold text-charcoal font-display">Our Mission</h3>
               </div>
               <p className="text-charcoal/60 leading-relaxed font-sans text-sm">
-                Transform Ideas into Reality — We transform innovative concepts into functional,
-                high-quality digital solutions that create meaningful impact. Each project undergoes
-                rigorous evaluation and refinement to ensure innovation and quality.
+                To become the world’s first <span className="font-bold text-charcoal">QAAS (Quantum-as-a-Service) company</span>, powered by the Avixr Intelligence Brain that continuously simulates business futures, reduces uncertainty, and empowers Data Scientist job roles.
               </p>
             </div>
           </MotionReveal>

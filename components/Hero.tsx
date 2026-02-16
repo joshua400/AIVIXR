@@ -38,7 +38,7 @@ export default function Hero() {
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 2.2 }} // Delay after preloader
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="font-display text-[12vw] md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9] break-words"
           >
             TRANSFORMING
@@ -49,7 +49,7 @@ export default function Hero() {
           <motion.h1
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
-            transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 2.3 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="font-display text-[12vw] md:text-8xl lg:text-9xl font-bold tracking-tighter text-charcoal leading-[0.9] break-words"
           >
             VISIONS
@@ -59,7 +59,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-charcoal/70 text-lg md:text-xl max-w-2xl mx-auto font-sans font-light leading-relaxed mb-12"
         >
           Engineering the Future of Digital Innovation.
@@ -68,7 +68,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 2.8 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
           className="flex justify-center"
         >
           <a href="#services" className="group inline-flex items-center gap-4 px-8 py-4 bg-charcoal text-white text-xs font-bold uppercase tracking-widest hover:bg-accent-gold hover:text-charcoal transition-all duration-300 rounded-full">

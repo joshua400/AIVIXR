@@ -2,7 +2,6 @@ import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import Infracore from '@/components/Infracore'
-import Process from '@/components/Process'
 import Marquee from '@/components/Marquee'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
@@ -55,7 +54,6 @@ export default function Home() {
 
         <Services />
         <Infracore />
-        <Process />
         <About />
         <Marquee />
         <DigitalMarketing />
