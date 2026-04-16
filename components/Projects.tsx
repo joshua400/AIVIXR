@@ -5,7 +5,6 @@ import { MotionReveal } from '@/hooks/useAnimations'
 const clients = [
   { name: 'Atribs Global', logo: '/img6.png', url: 'https://www.atribsglobal.com/' },
   { name: 'BrumBella', logo: '/brumbella-logo.png', url: 'https://www.brumbella.com' },
-  { name: 'Q Simutron', logo: '/qsimutron.png', url: 'https://tiny-croquembouche-2814e3.netlify.app/' },
   { name: 'Astrosolstice', logo: '/img2.png', url: 'https://www.astrosolstice.com' },
   { name: 'introto.in', logo: '/img5.png', url: 'https://www.introto.in' },
   { name: 'SEIKO MARAICA', logo: '/img4.png' },
