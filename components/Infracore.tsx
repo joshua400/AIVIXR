@@ -30,7 +30,7 @@ export default function Infracore() {
                                 <div className="px-3 py-1 bg-charcoal text-white text-[10px] font-bold rounded-full uppercase tracking-widest">
                                     Product
                                 </div>
-                                <h3 className="font-display font-bold text-2xl tracking-tight text-charcoal">Q-Simutron</h3>
+                                <h3 className="font-display font-bold text-2xl tracking-tight text-charcoal">Top of Digital Horizons</h3>
                                 <span className="text-xs font-medium text-charcoal/40 uppercase tracking-widest ml-auto">Coming Soon</span>
                             </div>
                             <p className="text-lg text-charcoal/70 font-sans leading-relaxed mb-6">
@@ -56,7 +56,7 @@ export default function Infracore() {
                             />
                             <motion.img
                                 src="/qsimutron.png"
-                                alt="Q-Simutron"
+                                alt="Top of Digital Horizons"
                                 className="w-32 h-32 object-contain brightness-[1.5] transition-all"
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}

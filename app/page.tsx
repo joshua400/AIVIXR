@@ -52,8 +52,8 @@ export default function Home() {
         <Navigation />
         <Hero />
 
-        <Services />
         <Infracore />
+        <Services />
         <About />
         <Marquee />
         <DigitalMarketing />

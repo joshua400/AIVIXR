@@ -47,7 +47,7 @@ export default function About() {
                 The company develops scalable software platforms that transform complex decision-making into data-driven foresight.
               </p>
               <p>
-                AVIXR specializes in secure intelligence SaaS solutions. Its core innovation is <span className="font-bold text-charcoal">Q-Simutron</span>, a quantum-inspired Business Simulation Intelligence platform designed to:
+                AVIXR specializes in secure intelligence SaaS solutions. Its core innovation is <span className="font-bold text-charcoal">Top of Digital Horizons</span>, a quantum-inspired Business Simulation Intelligence platform designed to:
               </p>
               <ul className="list-disc list-inside space-y-1 text-base">
                 <li>Simulate future outcomes</li>
