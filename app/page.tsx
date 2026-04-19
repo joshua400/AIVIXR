@@ -54,11 +54,11 @@ export default function Home() {
 
         <Infracore />
         <Services />
+        <Founder />
         <About />
         <Marquee />
         <DigitalMarketing />
         <Projects />
-        <Founder />
         <FAQ />
         <Contact />
 
